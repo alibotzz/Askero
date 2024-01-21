@@ -504,7 +504,7 @@ if (args[0] === "on") {
 if (AntiLinkAll) return reply('Bereits aktiviert')
 ntilinkall.push(from)
 fs.writeFileSync('./Gallery/database/antilink.json', JSON.stringify(ntilinkall))
-reply('Success in turning on all antilink in this group')
+reply('Antilink für diese Gruppe wurde Erfolgreich Aktiviert!')
 var groupe = await Maria.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -517,7 +517,7 @@ if (!AntiLinkAll) return reply('Bereits Deaktiviert')
 let off = ntilinkall.indexOf(from)
 ntilinkall.splice(off, 1)
 fs.writeFileSync('./Gallery/database/antilinkall.json', JSON.stringify(ntilinkall))
-reply('Success in turning off all antilink in this group')
+reply('Antilink für diese Gruppe wurde Erfolgreich Deaktiviert!')
 } else {
   await reply(`Please Type The Option\n\nExample: ${prefix + command} on\nExample: ${prefix + command} off\n\non to enable\noff to disable`)
   }
@@ -1123,7 +1123,8 @@ break
                 if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
                 reply(mess.wait)
                 let media = await Maria.downloadAndSaveMediaMessage(qmsg)
-                let ran = await getRandom('.png')
+         
+       let ran = await getRandom('.png')
                 exec(`ffmpeg -i ${media} ${ran}`, (err) => {
                     fs.unlinkSync(media)
                     if (err) return err
@@ -1446,12 +1447,12 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 
             case "rules":
       
-        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze .support, um den Link zur offiziellen Gruppe per Pn zu erhalten.\n\n*--->* Um ღƐ×ͥΐզͣօͫή BØ₸ღ zu deiner Gruppe hinzuzufügen Kontaktiere bitte den Besitzer mit: *.owner/.mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der *.help* liste \n\n* Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat. \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ Exiqon Bots inc* `
+        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze .support, um den Link zur offiziellen Gruppe per Pn zu erhalten.\n\n*--->* Um ღƐ×ͥΐզͣօͫή BØ₸ღ zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: *.owner/.mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der *.menu* liste \n\n* Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat. \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ Exiqon Bots inc* `
 
         Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
         break
-      case 'hii': case 'hi': case 'Hi':
+      case 'bot': case 'exiqon': case 'hilfe':
        
         
         let txxt = `👋🏻 Hey *${pushname}*, *Ich bin ღƐ×ͥΐզͣօͫή BØ₸ღ*📍\nEin Whatsapp Bot erstellt von: ღƐ×ͥΐզͣօͫήღ \n\n Nutze den Befehl *${prefix}support* für Hilfe`
