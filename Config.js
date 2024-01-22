@@ -38,14 +38,14 @@ global.autoread_status = false //auto view status/story
 
 //reply messages
 global.mess = {
-    done: '*here you go!* \n\n*🎀 ꧁ღƐ×ͥΐզͣօͫή BØ₸ღ꧂ 🎀*\n\n*🧩 Bot link:* \nhttps://github.com/ExiqonBot/Bot-Launch-V1.git\n',
-    prem: '*Diese Funktion kann nur von Premium-Benutzern genutzt werden*',
-    admin: '*This feature can be used by admin only*',
-    botAdmin: '*This feature can only be used when the bot is a group admin* ',
-    owner: '*This feature can be used by owner only*',
-    group: '*This feature is only for groups*',
-    private: '*This feature is only for private chats*',
-    wait: '*In process...* ',    
+    done: '*here you go!* \n\n*🎀 ღƐ×ͥΐզͣօͫή BØ₸ღ 🎀*\n\n*🧩 Bot link:* \nhttps://github.com/ExiqonBot/Bot-Launch-V1.git\n',
+    prem: '*Dieser Befehl kann nur von Premium-Benutzern genutzt werden*',
+    admin: '*Dieser Befehl kann nur von einem Admin verwendet werden.*',
+    botAdmin: '*Dieser Befehl kann nur genutzt werden, wenn der Bot ein Gruppenadmin ist* ',
+    owner: '*Dieser Befehl kann nur vom Bot Owner genutzt werden*',
+    group: '*Dieser Befehl kann nur in Gruppen verwendet werden*',
+    private: '*Dieser Befehl kann nur in Privaten Chats verwendet werden*',
+    wait: '*un momento por favor...* ',    
     error: '*Error!*',
 }
 
