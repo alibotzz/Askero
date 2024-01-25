@@ -1,10 +1,7 @@
 async function antibeleidigung(a, b, eng) {
     const isRegistered = await a.db.containsId('registered', a.sender.id)
     const isAntibeleidigung = a.isGroupMsg ? await a.db.groupinfoId('antibeleidigung', a.groupId) : false
-    var { getRang } = a.importFresh('../../lib/rang.js')
-    var isLeitung = await getRang('isLeitung', a.sender.id, a.db)
-
-    if (!isRegistered) return await b.reply(a.from, eng.notRegistered(), a.id)
+    
     if (!a.isGroupMsg) return await b.reply(a.from, eng.groupOnly(), a.id)
     var engname = 'Antibeleidigung'
     if (a.ar[0] === 'enable') {
