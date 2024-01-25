@@ -1,5 +1,4 @@
 async function antibeleidigung(a, b, eng) {
-    const isRegistered = await a.db.containsId('registered', a.sender.id)
     const isAntibeleidigung = a.isGroupMsg ? await a.db.groupinfoId('antibeleidigung', a.groupId) : false
     
     if (!a.isGroupMsg) return await b.reply(a.from, eng.groupOnly(), a.id)
@@ -60,7 +59,7 @@ async function antibeleidigung(a, b, eng) {
         }
         await b.reply(a.from, `*── 「 ANTIBELEIDIGUNG 」 ──*\n\nHier sind die Aktuellen Beleidigungen:\n${showrules}`, a.id)
     } else {
-        await b.reply(a.from, `Verwendung:\n${a.prefix}antibeleidigung\n_Zeigt Verwendung_\n\n${a.prefix}antibeleidigung enable zum aktivieren\n${a.prefix}antibeleidigung disable zum deaktivieren\n\n${a.prefix}antibeleidigung check\n_Zeigt Aktuelle Beleidigungen an._\n\n${a.prefix}antibeleidigung add/remove\n_Fügt bzw. entfernt Beleidigungen_`, a.id)
+        await b.reply(a.from, `Verwendung:\n${prefix}antibeleidigung\n_Zeigt Verwendung_\n\n${a.prefix}antibeleidigung enable zum aktivieren\n${prefix}antibeleidigung disable zum deaktivieren\n\n${prefix}antibeleidigung check\n_Zeigt Aktuelle Beleidigungen an._\n\n${a.prefix}antibeleidigung add/remove\n_Fügt bzw. entfernt Beleidigungen_`, a.id)
     }
 }
 const helpobj = {
