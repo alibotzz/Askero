@@ -1,4 +1,4 @@
-<a href="[https://ibb.co/pQNpmwN](https://telegra.ph/file/b9c8f067f065eccc08da7.jpg)"><img src="[https://i.ibb.co/xYwQ4Lw/cheemspic.jpg](https://telegra.ph/file/b9c8f067f065eccc08da7.jpg)" alt="Lion-Bot" border="0"></a>
+<a href=""><img src="" alt="Lion-Bot" border="0"></a>
 <h1 align="center">🦁Lion-Bot🦁<br></h1>
 
 <p align="center"> 
@@ -18,7 +18,7 @@
 5. auto react added ✅️
 🔻More features and improvements!
 
--regards Ayush
+-regards Lion-Bot Team
 ```
 </br>
 
