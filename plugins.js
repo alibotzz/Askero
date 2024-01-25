@@ -366,7 +366,7 @@ const Mariabuffer = await getBuffer(ppuser)
 const Mariatime = moment.tz('Europe/Berlin').format('HH:mm:ss')
 const Mariadate = moment.tz('Europe/Berlin').format('DD/MM/YYYY')
 let MariaName = num
-Mariabody = `𝗢𝗼𝗽𝘀‼️ @${MariaName.split("@")[0]}, you have been *demoted* from *admin* 😬`
+Mariabody = `Damnd‼️ @${MariaName.split("@")[0]}, Du wurdest *degradiert* Scheiße gelaufen du *Ayri* 🗣️`
 Maria.sendMessage(anu.id,
  { text: Mariabody,
  contextInfo:{
