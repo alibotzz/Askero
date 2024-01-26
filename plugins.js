@@ -1,4 +1,4 @@
-require('./Config')
+require('./Config') Bot hat falsche plugins neue hinzufügen von backuponühone wieder 
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
