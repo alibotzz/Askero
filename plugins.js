@@ -290,21 +290,19 @@ MariaWlcm = await getBuffer(ppuser)
 MariaLft = await getBuffer(ppuser)
 	
                 if (anu.action == 'add') {
-		if (!gloif (anu.action == 'add') {
   if (!global.welcome) return;	
-  const Mariabuffer = await getBuffer(ppuser)
-  let MariaName = num
-  const xtime = moment.tz('Europe/Berlin').format('HH:mm:ss')
-  const xdate = moment.tz('Europe/Berlin').format('DD/MM/YYYY')
-  const xmembers = metadata.participants.length
+  const Mariabuffer = await getBuffer(ppuser);
+  let MariaName = num;
+  const xtime = moment.tz('Europe/Berlin').format('HH:mm:ss');
+  const xdate = moment.tz('Europe/Berlin').format('DD/MM/YYYY');
+  const xmembers = metadata.participants.length;
   Mariabody = `┌──⊰ *🫶🏼Herzlich Willkommen🫶🏼*⊰
 │⊳  🌐 In: ${metadata.subject}
 │⊳  📋 Name: @${MariaName.split("@")[0]}
 │⊳  👥 Mitglieder: ${xmembers}th
 │⊳  🕰️ Beigetreten: ${xtime} ${xdate}
-└──────────⊰
-`;
-
+└──────────⊰`;
+  
   Maria.sendMessage(anu.id, {
     text: Mariabody,
     contextInfo: {
@@ -323,11 +321,11 @@ MariaLft = await getBuffer(ppuser)
   });
 } else if (anu.action == 'remove') {
   if (!global.farewell) return; // Überprüfe, ob Abschiedsnachrichten aktiviert sind
-  const Mariabuffer = await getBuffer(ppuser)
-  const Mariatime = moment.tz('Europe/Berlin').format('HH:mm:ss')
-  const Mariadate = moment.tz('Europe/Berlin').format('DD/MM/YYYY')
-  let MariaName = num
-  const Mariamembers = metadata.participants.length
+  const Mariabuffer = await getBuffer(ppuser);
+  const Mariatime = moment.tz('Europe/Berlin').format('HH:mm:ss');
+  const Mariadate = moment.tz('Europe/Berlin').format('DD/MM/YYYY');
+  let MariaName = num;
+  const Mariamembers = metadata.participants.length;
   Mariabody = `┌──⊰ *🫶🏼Aufwiedersehen🫶🏼*⊰
 │⊳  👤 From: ${metadata.subject}
 │⊳  📃 Grund: Hat sich vom Staub gemacht💨
@@ -337,6 +335,7 @@ MariaLft = await getBuffer(ppuser)
 └──────────⊰`;
   // Code für das Senden der Abschiedsnachricht
 }
+	
 Maria.sendMessage(anu.id,
  { text: Mariabody,
  contextInfo:{
