@@ -1,5 +1,5 @@
 <a href=""><img src="" alt="Lion-Bot" border="0"></a>
-<h1 align="center">🦁Lion-Bot🦁<br></h1>
+<h1 align="center">🦁ღĹíőͥńͣ BͫØ₸ღ🦁<br></h1>
 
 <p align="center"> 
   Konochiwa Senpai, I am "Lion-Bot " a WhatsApp bot made by ღƐ×ͥΐզͣօͫήღ to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
