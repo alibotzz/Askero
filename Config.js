@@ -8,12 +8,12 @@ global.ytname = "YT: Soon"
 global.socialm = "GitHub: ExiqonBot"
 global.location = "Germany"
 
-global.botname = 'ღƐ×ͥΐզͣօͫή BØ₸ღ' //name of the bot
+global.botname = 'ღĹíőͥńͣ BͫØ₸ღ' //name of the bot
 
 //sticker details
-global.stickername = 'ღƐ×ͥΐզͣօͫήღ'
+global.stickername = 'ღĹíőͥńͣ BͫØ₸ღ'
 global.packname = 'Sticker By'
-global.author = 'ღƐ×ͥΐզͣօͫή BØ₸ღ'
+global.author = 'ღĹíőͥńͣ BͫØ₸ღ'
 //console view/theme
 global.themeemoji = '👑'
 global.wm = "ღĹíͥőͣńͫღ botz inc."
