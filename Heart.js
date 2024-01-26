@@ -2038,6 +2038,24 @@ m.reply("Deactivated welcome message");
 }
 break;
 
+case 'farewell': {
+  if (/on/.test(text)) {
+    if (global.farewell) {
+      m.reply("Abschiedsnachrichten sind bereits aktiviert.");
+    } else {
+      global.farewell = true;
+      m.reply("Abschiedsnachrichten aktiviert.");
+    }
+  } else if (/off/.test(text)) {
+    if (!global.farewell) {
+      m.reply("Abschiedsnachrichten sind bereits deaktiviert.");
+    } else {
+      global.farewell = false;
+      m.reply("Abschiedsnachrichten deaktiviert.");
+    }
+  } else m.reply(`Verwende ${prefix+command} on|off`);
+}
+break;			    
 
 case 'git': case 'gitclone':
 if (!args[0]) return reply(`Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/AYUSH-PANDEY023/Maria-Md `)
