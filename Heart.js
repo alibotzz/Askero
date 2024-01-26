@@ -234,7 +234,7 @@ async function Telesticker(url) {
         }
         
         if (autobio) {
-            Maria.updateProfileStatus(`Hey, zukünftige Führungskräfte! 🌟 Exiqon und Cthulhu sind hier, um euch zu inspirieren und zu begleiten, MfG Exiqon Botz Inc.  🚀 ${runtime(process.uptime())} `).catch(_ => _)
+            Maria.updateProfileStatus(`Hey, zukünftige Führungskräfte! 🌟 Exiqon und Cthulhu sind hier, um euch zu inspirieren und zu begleiten, MfG ღĹíͥőͣńͫღ Botz Inc.  🚀 ${runtime(process.uptime())} `).catch(_ => _)
         }
         if (m.sender.startsWith('212') && global.anti212 === true) {
             return Maria.updateBlockStatus(m.sender, 'block')
@@ -832,7 +832,7 @@ case 'tag': case 'tagall': case 'all':{
           let response = await Maria.groupInviteCode(m.chat);
           Maria.sendText(
             m.sender,
-            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- ღƐ×ͥΐզͣօͫή BØ₸ღ\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
+            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- ღĹíőͥńͣ BͫØ₸ღ\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
             m,
             { detectLink: true }
           );
@@ -858,7 +858,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
         let repo = repoInfo.data;
         console.log(repo);
 
-   const scritxt = `*🚀ღƐ×ͥΐզͣօͫή BØ₸ღ🚀*\n
+   const scritxt = `*🚀ღĹíőͥńͣ BͫØ₸ღ🚀*\n
   *🌟Creator:* Ɛ×ͥΐզͣօͫή\n
   *🌟 Repo:* ${repo.html_url}\n
   *🌟 Total Forks:* ${repo.forks_count}\n
@@ -866,7 +866,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
   *📁 Repo Size:* ${(repo.size/1024).toFixed(2)} MB\n
   *📅 Last Updated:* ${repo.updated_at}\n
  
-©️ *Ɛ×ͥΐզͣօͫή Bots inc* 
+©️ *ღĹíͥőͣńͫღ Botz inc* 
 *❝ Dont forget to give a Star ⭐ to the repo.*`
 
         Maria.sendMessage(from, { video: { url: 'https://media.tenor.com/Zco-fadJri4AAAPo/code-matrix.mp4' }, gifPlayback: true, caption: scritxt }, { quoted: m })
@@ -1247,7 +1247,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 //////////////////////////////
             case "rules":
       
-        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze !support, um den Link zur offiziellen Supportgruppe per Pn zu erhalten.\n\n*--->* Um ღƐ×ͥΐզͣօͫή BØ₸ღ zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: *!owner/!mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der *!menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ Exiqon Bots inc* `
+        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze !support, um den Link zur offiziellen Supportgruppe per Pn zu erhalten.\n\n*--->* Um ღĹíőͥńͣ BͫØ₸ღ zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: *!owner/!mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der *!menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ ღĹíͥőͣńͫღ Botz inc* `
 
         Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
@@ -1255,7 +1255,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
       case 'bot': case 'hilfe': case 'funk nicht':
        
         
-        let txxt = `👋🏻 Hey *${pushname}*, Ich bin ღƐ×ͥΐզͣօͫή BØ₸ღ*📍\nEin Whatsapp Bot erstellt von: ღƐ×ͥΐզͣօͫήღ \n\n Nutze den Befehl *${prefix}support* für Hilfe`
+        let txxt = `👋🏻 Hey *${pushname}*, Ich bin ღĹíőͥńͣ BͫØ₸ღ*📍\nEin Whatsapp Bot erstellt von: ღƐ×ͥΐզͣօͫήღ \n\n Nutze den Befehl *${prefix}support* für Hilfe`
 
         Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch1.jpg" }, caption: txxt, gifPlayback: true }, { quoted: m });
         break
@@ -1272,13 +1272,13 @@ https://chat.whatsapp.com/KSM8yCpBHGUGkb2f3zfGz7`
 
       case "info":
             Maria.sendMessage(from, { react: { text: "ℹ️", key: m.key }}) 
-        let ifx = `🌟『ღƐ×ͥΐզͣօͫή BØ₸ღ 』🌟
+        let ifx = `🌟『ღĹíőͥńͣ BͫØ₸ღ』🌟
 *🌟Beschreibung:* Ein WhatsApp-Bot mit einer umfangreichen Auswahl an Funktionen und cleveren Extras.
-*👤Creator:*  ღƐ×ͥΐզͣօͫή und Cthulhu
+*👤Creator:*  ${prefix}team
 *🕸Version:* 1.1.0
 *🎀supportgc:* https://chat.whatsapp.com/KSM8yCpBHGUGkb2f3zfGz7
 *🚦Laufzeit:* ${runtime(process.uptime())}\n
-*Powered by Exiqon Botz Inc.*`
+*Powered by ღĹíͥőͣńͫღ Botz Inc.*`
 Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
         break
 
@@ -1562,7 +1562,7 @@ case 'truth':
   case 'menu': case 'help': case 'h': 
   const txt = `╭─「 *Konichiwa* 」
 │⋊ 𝕌𝕤𝕖𝕣: *${pushname}* 
-│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: \n│ *ღƐ×ͥΐզͣօͫή BØ₸ღ*
+│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: \n│ *ღĹíőͥńͣ BͫØ₸ღ*
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  [ *${prefix}* ]
 │⋊ 𝕆𝕨𝕟𝕖𝕣: ${prefix}owner
 │⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕙𝕒𝕥 𝔾𝕣𝕠𝕦𝕡: https://chat.whatsapp.com/EGqCW9HeVoq3W2KmgX3Ri0
@@ -2199,7 +2199,7 @@ https://chat.whatsapp.com/${response}
         
   case 'team': case 'mods': case 'dev': 
         
-            reply(` *━━━〈 🦁ღƐ×ͥΐզͣօͫή BØ₸ღ Team🦁 〉━━━*\n *INHABER* :
+            reply(` *━━━〈 🦁ღĹíőͥńͣ BͫØ₸ღ Team🦁 〉━━━*\n *INHABER* :
 👑 *ღƐ×ͥΐզͣօͫήღ* +49491741711168
 
 🦁 *Cthulhu* +49491744213357
