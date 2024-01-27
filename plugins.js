@@ -269,62 +269,29 @@ printRainbowMessage();
         return trueFileName
     }
 
-// ... (unveränderte Zeilen)
-
 Maria.ev.on('group-participants.update', async (anu) => {
     console.log(anu);
     try {
         let metadata = await Maria.groupMetadata(anu.id);
         let participants = anu.participants;
         for (let num of participants) {
-            let metadata = await Maria.groupMetadata(anu.id)
-let participants = anu.participants
-for (let num of participants) {
-try {
-ppuser = await Maria.profilePictureUrl(num, 'image')
-} catch (err) {
-ppuser = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60'
-}
-try {
-ppgroup = await Maria.profilePictureUrl(anu.id, 'image')
-} catch (err) {
-ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
-}
+            let metadata = await Maria.groupMetadata(anu.id);
+            let participants = anu.participants;
+            for (let num of participants) {
+                try {
+                    ppuser = await Maria.profilePictureUrl(num, 'image');
+                } catch (err) {
+                    ppuser = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60';
+                }
+                try {
+                    ppgroup = await Maria.profilePictureUrl(anu.id, 'image');
+                } catch (err) {
+                    ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60';
+                }
+            }
         }
     } catch (err) {
         console.log(err);
     }
 });
 
-Maria.downloadMediaMessage = async (message) => {
-    let mime = (message.msg || message).mimetype || '';
-    let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0];
-    const stream = await downloadContentFromMessage(message, messageType);
-    let buffer = Buffer.from([]);
-    for await (const chunk of stream) {
-        buffer = Buffer.concat([buffer, chunk]);
-    }
-
-    return buffer;
-};
-
-return startMaria();
-
-let file = require.resolve(__filename);
-fs.watchFile(file, () => {
-    fs.unwatchFile(file);
-    console.log(chalk.redBright(`Update ${__filename}`));
-    delete require.cache[file];
-    require(file);
-});
-
-process.on('uncaughtException', function (err) {
-    let e = String(err);
-    if (e.includes("Socket connection timeout")) return;
-    if (e.includes("item-not-found")) return;
-    if (e.includes("rate-overlimit")) return;
-    if (e.includes("Connection Closed")) return;
-    if (e.includes("Timed Out")) return;
-    if (e.includes("Value not found")) return;
-    console.log('Caught exception: ', err);
-});
