@@ -23,6 +23,7 @@ const { fetchBuffer, buffergif } = require("./Gallery/lib/myfunc2")
 
 /////log
 global.modnumber = '49491741711168' 
+global.modnumber_2 = '491773379918'
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
 const isnsfw = JSON.parse(fs.readFileSync('./Gallery/database/nsfw.json'));
