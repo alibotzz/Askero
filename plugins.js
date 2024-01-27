@@ -296,8 +296,8 @@ Maria.sendMessage(anu.id,
 "thumbnailUrl": ``,
 "thumbnail": MariaLft,
 "sourceUrl": `${link}`}}})
-} 
-else if (anu.action == 'promote') {
+
+} else if (anu.action == 'promote') {
 const Mariabuffer = await getBuffer(ppuser)
 const Mariatime = moment.tz('Europe/Berlin').format('HH:mm:ss')
 const Mariadate = moment.tz('Europe/Berlin').format('DD/MM/YYYY')
@@ -315,6 +315,7 @@ Mariabody = ` Glückwunsch🎉 @${MariaName.split("@")[0]}, Du bist jetzt ein *A
 "thumbnailUrl": ``,
 "thumbnail": MariaWlcm,
 "sourceUrl": `${link}`}}})
+	
 } else if (anu.action == 'demote') {
 const Mariabuffer = await getBuffer(ppuser)
 const Mariatime = moment.tz('Europe/Berlin').format('HH:mm:ss')
