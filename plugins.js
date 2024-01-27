@@ -296,7 +296,8 @@ Maria.sendMessage(anu.id,
 "thumbnailUrl": ``,
 "thumbnail": MariaLft,
 "sourceUrl": `${link}`}}})
-} else if (anu.action == 'promote') {
+} 
+else if (anu.action == 'promote') {
 const Mariabuffer = await getBuffer(ppuser)
 const Mariatime = moment.tz('Europe/Berlin').format('HH:mm:ss')
 const Mariadate = moment.tz('Europe/Berlin').format('DD/MM/YYYY')
