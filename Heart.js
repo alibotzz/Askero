@@ -2229,7 +2229,37 @@ https://chat.whatsapp.com/${response}
     
     
 /////////////////////////////////////////////////////
+switch (command) {
+    case 'kick':
+        if (!m.isGroup) return reply(mess.group);
+        if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin);
+        if (!isBotAdmins) return reply(mess.botAdmin);
 
+        // Liste der unerwünschten Wörter
+        const unwantedWords = ['Hurensohn', 'Hurentochter', 'Bastard', 'Schlampe', 'Wixxer', 'Schwuchtel', 'Allahu akbar', 'Allah', 'Fotze'];
+
+        // Überprüfen, ob die Nachricht eines der unerwünschten Wörter enthält
+        const containsUnwantedWord = unwantedWords.some(word => new RegExp(\\b${word}\\b, 'i').test(text));
+
+        if (containsUnwantedWord) {
+            // Reaktion auf unerwünschte Wörter
+            reply('Deine Nachricht enthält unerwünschte Wörter. Diese Art von Sprache ist nicht erlaubt.');
+        } else {
+            // Fortsetzung des Kicks-Codes
+            let blockwww = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net';
+            await Maria.groupParticipantsUpdate(m.chat, [blockwww], 'remove')
+                .then((res) => reply(json(res)))
+                .catch((err) => reply(json(err)));
+        }
+        break;
+
+    // Weitere Fälle für andere Befehle oder Aktionen können hier hinzugefügt werden.
+
+    default:
+        // Standardfall, wenn der Befehl nicht erkannt wird
+        break;
+}
+/////////////////////////////////////////////////////
 if(isCmd){
           reply (`No such command, Baka!`)
   
