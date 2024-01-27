@@ -149,6 +149,6 @@ npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 <h1 align="center">  🔮 Thanks To 🔮
 </h1>
 
-* [`🧧Xeon`](https://github.com/dgxeon)
+* [`🧧Cthulhu`](https://telegra.ph/file/a5b56b967fb935cf1a28c.jpg)
 
-* [`🧧Pikachu`](https://github.com/PikaBotz)
+* [`🧧❥❥☠⃞🇨🇦⃝Leͥgeͣnͫd༻ᴳᵃᵇʳᵘ࿐`](https://telegra.ph/file/40194d06a2e041835136c.jpg)
