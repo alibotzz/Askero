@@ -1562,7 +1562,7 @@ case 'truth':
   case 'menu': case 'help': case 'h': 
   const txt = `╭─「 *Konichiwa* 」
 │⋊ 𝕌𝕤𝕖𝕣: *${pushname}* 
-│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: \n│ *ღĹíőͥńͣ BͫØ₸ღ*
+│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: *ღĹíőͥńͣ BͫØ₸ღ*
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  [ *${prefix}* ]
 │⋊ 𝕆𝕨𝕟𝕖𝕣: ${prefix}owner
 │⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕙𝕒𝕥 𝔾𝕣𝕠𝕦𝕡: https://chat.whatsapp.com/EGqCW9HeVoq3W2KmgX3Ri0
@@ -2211,7 +2211,7 @@ https://chat.whatsapp.com/${response}
         case 'test': case 'p': case 'ping': 
         let timestampe = speed()
         let latensie = speed() - timestampe
-         reply(`🧧Test erfolgreich, Bot ist aktiv\n\n📍*ping* ${latensie.toFixed(4)} miliseconds\n\n🎀Type ${prefix}menu to display the menu`)
+         reply(`🧧Test erfolgreich, Bot ist aktiv\n\n📍*ping* ${latensie.toFixed(4)} milisekunden\n\n🎀Type ${prefix}menu to display the menu`)
         break   
     
         
@@ -2222,7 +2222,7 @@ https://chat.whatsapp.com/${response}
 
 🦁 *Cthulhu* +49491744213357
 
-🦁 *☬དΛ₦Ø₦ɎᙢØᑌŠཌ☬* +491773379918
+🦁 *❥❥☠⃞🇨🇦⃝Leͥgeͣnͫd༻ᴳᵃᵇʳᵘ࿐* +491773379918
 
 \n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Alternativ besteht die Möglichkeit mit *${prefix}support* der Supportgruppe beizutreten und uns euer Anliegen dort zu schildern.\n\n*✨️Danke für eure Unterstützung, euer Bot-Team.* `)
         break   
