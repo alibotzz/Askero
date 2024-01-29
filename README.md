@@ -127,7 +127,7 @@ pkg install imagemagick -y
 
 git clone https://github.com/AYUSH-PANDEY023/Maria-Md
 
-cd Maria-Md
+cd Lion-Bot-V1
 
 rm -rf session
 
