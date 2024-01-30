@@ -338,7 +338,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-Maria.sendMessage(from, {text: `\`\`\`「 ⚠️Achtung⚠️ 」\`\`\`\n\nWenn du kein Admin bist, sende keinen Link in diese Gruppe, sonst wirst du sofort Entfernt!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+Maria.sendMessage(from, {text: `\`\`\`「 ⚠️Achtung⚠️ 」\`\`\`\n\nWenn du kein Admin bist, sende keinen Link in diese Gruppe, sonst wirst du sofort Entfernt!`}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkAll) return reply('Bereits deaktiviert')
 let off = ntilinkall.indexOf(from)
@@ -420,7 +420,7 @@ break
                     if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return reply('Link Invalid!')
                     reply(mess.wait)
                     let result = args[0].split('https://chat.whatsapp.com/')[1]
-                    await Maria.groupAcceptInvite(result).then((res) => reply(json(res))).catch((err) => reply(json(err)))
+                    await Maria.groupAcceptInvite(result)
                 } catch {
                     reply('Gruppenbeitritt ist fehlgeschlagen.')
                 }
@@ -694,7 +694,7 @@ break
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 let blockwww = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-                await Maria.groupParticipantsUpdate(m.chat, [blockwww], 'remove').then((res) => reply(json(res))).catch((err) => reply(json(err)))
+                await Maria.groupParticipantsUpdate(m.chat, [blockwww], 'remove')
                 break
             case 'add':
                 if (!m.isGroup) return reply(mess.group)
