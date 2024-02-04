@@ -432,7 +432,7 @@ function writeData() {
                 if (m.isGroup) {
                     const pushname = m.pushName || "No Name";
                     await Maria.sendMessage(m.chat, {
-                        text: `${pushname}, congratulations! You've leveled up to *${user.level}*! Keep being active to level up more.\nCurrent XP: ${user.exp}/${xpRange(user.level, global.multiplier).xp}`
+                        text: `${pushname}, Glückwunsch! Du bist ein Level aufgestiegen *${user.level}*! Bleibe aktiv, um weiter aufzusteigen.\nAktuelle XP: ${user.exp}/${xpRange(user.level, global.multiplier).xp}`
                     }, m);
                 }
             }
@@ -513,7 +513,7 @@ function writeData() {
                                                                                                                                                                                                                                                                                             : ((user.level >= 97) && (user.level <= 100)) ? 'Mythic II'
                                                                                                                                                                                                                                                                                                     : ((user.level >= 100) && (user.level <= 500)) ? 'Legende'
 
-                                                                                                                                                                                                                                                                                                            : ((user.level >= 500) && (user.level <= 9999)) ? 'FAST AN DER SPIZE'
+                                                                                                                                                                                                                                                                                                            : ((user.level >= 500) && (user.level <= 9999)) ? 'FAST AN DER SPITZE'
 
                                                                                                                                                                                                                                                                                                                     : ((user.level >= 10000) && (user.level <= 17000)) ? 'EIF FAKE OWNER' : 'EIF FAKE OWNER'
                     user.role = rolee
@@ -976,9 +976,9 @@ case 'tag': case 'tagall': case 'all':{
 
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `🧩𝗧𝗮𝗴𝗮𝗹𝗹🧩
+ let teks = `📍𝗧𝗮𝗴𝗮𝗹𝗹📍
   
- *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
+ *Nachricht : ${args.join(" ") ? args.join(" ") : 'keine Nachricht'}*\n\n`
  for (let mem of participants) {
  teks += `🔮 @${mem.id.split('@')[0]}\n`
  }
@@ -1292,7 +1292,7 @@ break
             }
             break
             case 'toqr': {
-                if (!q) return reply(' Please include link or text!')
+                if (!q) return reply(' Bitte füge einen Link oder Text hinzu!')
                 const QrCode = require('qrcode-reader')
                 const qrcode = require('qrcode')
                 let qyuer = await qrcode.toDataURL(q, {
@@ -1304,7 +1304,7 @@ break
                 let medi = fs.readFileSync('./' + buff)
                 await Maria.sendMessage(from, {
                     image: medi,
-                    caption: "Here you go!"
+                    caption: "Tadaaa✨!"
                 }, {
                     quoted: m
                 })
@@ -1460,7 +1460,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
         break
       case "support":
      
-        let tex = `ich habe deine anfrage erfolgreich zur support gruppe weitergeleitet hier ist die gruppe:
+        let tex = `Ich habe deine Anfrage erfolgreich an das Support-Team weitergeleitet. Hier ist der Link zur Supportgruppe:
 
 https://chat.whatsapp.com/KSM8yCpBHGUGkb2f3zfGz7`
 
@@ -1498,8 +1498,8 @@ google({'query': text}).then(res => {
 let teks = `「🏮 *Google Search Engine*🏮」 \n\n
 `
 for (let g of res) {
-teks += `🧧 *Title* : ${g.title}\n`
-teks += `🔮 *Description* : ${g.snippet}\n`
+teks += `🧧 *Titel* : ${g.title}\n`
+teks += `🔮 *Beschreibung* : ${g.snippet}\n`
 teks += `📎 *Link* : ${g.link}\n\n────────────────────\n\n`
 } 
 reply(teks)
@@ -1758,7 +1758,7 @@ case 'truth':
                            Maria.sendMessage(from, { image: buffer, caption: '*You have chosen Truth*\n'+ Mariatruthww }, {quoted:m})
                            break
                            
-  case 'menu': case 'help': case 'h': 
+  case 'menu': case 'help': case 'befehle': 
   const txt = `╭─「 *Konichiwa* 」
 │⋊ 𝕌𝕤𝕖𝕣: *${pushname}* 
 │⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: *ღĹíőͥńͣ BͫØ₸ღ*
@@ -1799,6 +1799,7 @@ ${readmore}
 └──────────⊰
 
 ┌──⊰ _*🎉FUN🎉*_
+│⊳🎟️ ${prefix}xp
 │⊳🎟️ ${prefix}truth
 │⊳🎟️ ${prefix}dare
 │⊳🎟️ ${prefix}couple 
@@ -1817,6 +1818,8 @@ ${readmore}
 └──────────⊰
 ┌──⊰ _*📂download📂*_
 │⊳ 📥 ${prefix}play
+│⊳ 📥 ${prefix}pinterest
+│⊳ 📥 ${prefix}igvideo
 └──────────⊰
 ┌──⊰ _*🔖support🔖*_
 │⊳ 📥 ${prefix}tagteam
@@ -1841,7 +1844,6 @@ ${readmore}
 └──────────⊰
 ┌──⊰ _*⛩️Sonstiges⛩️*_
 │⊳ 🏮 ${prefix}sticker
-│⊳ 🏮 ${prefix}qc
 │⊳ 🏮 ${prefix}smeme
 │⊳ 🏮 ${prefix}take
 │⊳ 🏮 ${prefix}toimage
@@ -2432,7 +2434,7 @@ https://chat.whatsapp.com/${response}
 
 *Support Team* :
 
--💎 *Jeremy* (Leitung)
+-💎 *GoldtraderJD* (Leitung)
 -👷🏻‍♂️ *$nix $nus* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
