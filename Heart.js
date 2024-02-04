@@ -2217,12 +2217,38 @@ https://chat.whatsapp.com/${response}
         
   case 'team': case 'mods': case 'dev': 
         
-            reply(` *━━━〈 🦁ღĹíőͥńͣ BͫØ₸ღ Team🦁 〉━━━*\n *INHABER* :
-👑 *ღƐ×ͥΐզͣօͫήღ* +49491741711168
+            reply(` *━━━〈 🦁ღĹíőͥńͣ BͫØ₸ღ Team🦁 〉━━━*
 
-🦁 *Cthulhu* +49491744213357
+*High Team* :
 
-🦁 *❥❥☠⃞🇨🇦⃝Leͥgeͣnͫd༻ᴳᵃᵇʳᵘ࿐* +491773379918
+-👑 *Ɛ×ͥΐզͣօͫή* (Inhaber)
+-👑 *Cthulhu* (Inhaber)
+-👑 *𝕯𝖆𝖗𝖙𝖍 𝕾𝖎𝖉𝖎𝖔𝖚𝖘* (Inhaber)
+
+Projekleitung :
+
+-👀 *𝕯𝖆𝖗𝖙𝖍 𝕾𝖎𝖉𝖎𝖔𝖚𝖘* (Leitung)
+-👀 *⸸ℑꈤᥴꪊ𝕭ꪊᦓ⸸* (Stv.Leitung)
+
+*Tech-Team* :
+
+-💎 *セバスチャン* (Leitung)
+-🕹️ *(Name)* 
+-🕹️ *(Name)*
+
+*Mod-Team* :
+
+-💎 *(Name)* (Leitung)
+-👮🏻‍♂️ *(Name)* (Mod)
+-👮🏻‍♂️ *(Name)* (Mod)
+
+
+*Support Team* :
+
+-💎 *Jeremy* (Leitung)
+-👷🏻‍♂️ *(Name)* (Supporter)
+-👷🏻‍♂️ *(Name)* (Supporter)
+-👷🏻‍♂️ *(Name)* (Supporter)
 
 \n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Alternativ besteht die Möglichkeit mit *${prefix}support* der Supportgruppe beizutreten und uns euer Anliegen dort zu schildern.\n\n*✨️Danke für eure Unterstützung, euer Bot-Team.* `)
         break   
