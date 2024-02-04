@@ -2225,7 +2225,7 @@ https://chat.whatsapp.com/${response}
 -👑 *Cthulhu* (Inhaber)
 -👑 *𝕯𝖆𝖗𝖙𝖍 𝕾𝖎𝖉𝖎𝖔𝖚𝖘* (Inhaber)
 
-Projekleitung :
+*Projektleitung* :
 
 -👀 *𝕯𝖆𝖗𝖙𝖍 𝕾𝖎𝖉𝖎𝖔𝖚𝖘* (Leitung)
 -👀 *⸸ℑꈤᥴꪊ𝕭ꪊᦓ⸸* (Stv.Leitung)
@@ -2246,7 +2246,7 @@ Projekleitung :
 *Support Team* :
 
 -💎 *Jeremy* (Leitung)
--👷🏻‍♂️ *(Name)* (Supporter)
+-👷🏻‍♂️ *$nix $nus* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
 
