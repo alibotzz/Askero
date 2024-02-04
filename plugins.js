@@ -6,6 +6,8 @@ const moment = require('moment-timezone');
 const chalk = require('chalk')
 const FileType = require('file-type')
 const path = require('path')
+const yargs = require('yargs/yargs')
+const _ = require('lodash')
 const axios = require('axios')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./Gallery/lib/exif')
@@ -26,6 +28,7 @@ const store = makeInMemoryStore({
 
 let phoneNumber = "4915678394727"
 let owner = JSON.parse(fs.readFileSync('./Gallery/database/owner.json'))
+
 
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
 const useMobile = process.argv.includes("--mobile")
@@ -281,6 +284,7 @@ Maria.sendMessage(anu.id,
 "thumbnail": MariaWlcm,
 "sourceUrl": `${link}`}}})
                 } else if (anu.action == 'remove') {
+                        if (!global.welcome) return;	
                 	const Mariabuffer = await getBuffer(ppuser)
                     const Mariatime = moment.tz('Europe/Berlin').format('HH:mm:ss')
 	                const Mariadate = moment.tz('Europe/Berlin').format('DD/MM/YYYY')
@@ -331,7 +335,7 @@ const Mariabuffer = await getBuffer(ppuser)
 const Mariatime = moment.tz('Europe/Berlin').format('HH:mm:ss')
 const Mariadate = moment.tz('Europe/Berlin').format('DD/MM/YYYY')
 let MariaName = num
-Mariabody = `𝗢𝗼𝗽𝘀‼️ @${MariaName.split("@")[0]}, you have been *demoted* from *admin* 😬`
+Mariabody = ` *Ohje* @${MariaName.split("@")[0]}, Du wurdest von einem *Admin* degradiert 😬`
 Maria.sendMessage(anu.id,
  { text: Mariabody,
  contextInfo:{
@@ -383,4 +387,3 @@ if (e.includes("Timed Out")) return
 if (e.includes("Value not found")) return
 console.log('Caught exception: ', err)
 })
-
