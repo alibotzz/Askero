@@ -18,10 +18,15 @@ const { TelegraPh, UploadFileUgu, webp2mp4File, floNime } = require('./Gallery/l
 const { toAudio, toPTT, toVideo, ffmpeg, addExifAvatar } = require('./Gallery/lib/converter')
 const { smsg, getGroupAdmins, formatp, jam, formatDate, getTime, isUrl, await, sleep, clockString, msToDate, sort, toNumber, enumGetKey, runtime, fetchJson, getBuffer, json, delay, format, logic, generateProfilePicture, parseMention, getRandom, pickRandom, reSize } = require('./Gallery/lib/myfunc')
 let afk = require("./Gallery/lib/afk");
-
 const { fetchBuffer, buffergif } = require("./Gallery/lib/myfunc2")
-
+const isNumber = x => typeof x === 'number' && !isNaN(x)
+const yargs = require('yargs/yargs')
+const _ = require('lodash')
 /////log
+
+const PORT = process.env.PORT || 3000
+const { LowSync, JSONFileSync } = require('./lib/lowdb')
+const FileSync = require('./lib/lowdb/adapters/JSONFileSync')
 global.modnumber = '49491741711168' 
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
@@ -29,8 +34,15 @@ const isnsfw = JSON.parse(fs.readFileSync('./Gallery/database/nsfw.json'));
 
 let _afk = JSON.parse(fs.readFileSync('./Gallery/database/afk-user.json'))
 let hit = JSON.parse(fs.readFileSync('./Gallery/database/total-hit-user.json'))
-
-//time
+let expp = JSON.parse(fs.readFileSync('./Gallery/database/user-exp.json'))
+var low
+try {
+  low = require('lowdb')
+} catch (e) {
+  low = require('./lib/lowdb')
+}
+const { Low, JSONFile } = low
+const mongoDB = require('./lib/mongoDB')
 const replay = (teks) => {
             Maria.sendMessage(m.chat, { text: teks}, { quoted: m})
         }
@@ -67,7 +79,7 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
         
-        const prefix = global.prefa
+        const prefix = prefa
         const isCmd = body.startsWith(prefix)
         const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
         const args = body.trim().split(/ +/).slice(1)
@@ -119,7 +131,10 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
 const pickRandom = (arr) => {
 return arr[Math.floor(Math.random() * arr.length)]
 }
-
+expp = {
+        user:{},  
+}
+            
 	//random
 	    // Function to filter JPG and PNG files from a directory
 const getRandomImage = (directory) => {
@@ -321,8 +336,192 @@ if (isCreator) return reply(bvl)
 Maria.sendMessage(from, {text:`\`\`\`「 Link Erkannt 」\`\`\`\n\n@${m.sender.split("@")[0]} Wurde wegen eines Regelverstoß entfernt.`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
-  
+            // Anti Spam Protection
+            const spamProtection = new Map();
+
+            const isUserSpamming = (sender, command) => {
+                if (spamProtection.has(sender)) {
+                    const userData = spamProtection.get(sender);
+                    const { lastCommandTime, commandCount } = userData;
+                    const currentTime = Date.now();
+                    const timeDifference = currentTime - lastCommandTime;
+                    if (timeDifference < 2 * 60 * 1000) { // 2 minutes
+                        userData.commandCount += 1;
+                        if (userData.commandCount >= 8) {
+                            userData.timeout = currentTime + 5 * 60 * 1000; // 5 minutes timeout
+                            return true;
+                        }
+                    } else {
+                        userData.commandCount = 1;
+                        userData.lastCommandTime = currentTime;
+                    }
+                    spamProtection.set(sender, userData);
+                } else {
+                    spamProtection.set(sender, { lastCommandTime: Date.now(), commandCount: 1 });
+                }
+                return false;
+            };
+
+            // Inside the command handler, before executing the command
+            if (command.startsWith(prefix) && isUserSpamming(m.sender, command)) {
+                return reply('You are sending too many commands. Please wait for 5 minutes before using the bot again.');
+            }
+   	     global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
+// global.Fn = function functionCallBack(fn, ...args) { return fn.call(global.conn, ...args) }
+global.timestamp = {
+  start: new Date
+}
+
+global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
+let db
+
+if (opts['db']) {
+  let adapter = new FileSync(opts['db'])
+  db = new LowSync(adapter)
+} else {
+  let adapter = new JSONFileSync(path.join(__dirname, './database.json'))
+  db = new LowSync(adapter)
+}
+
+db.read()
+db.data ||= { users: {}, chats: {}, stats: {}, msgs: {}, sticker: {}, settings: {} }
+db.write()
+ console.log(db.data.users)
+        this.msgqueque = this.msgqueque || []
+        // console.log(chatUpdate)//
+        if (!chatUpdate) return
+        if (chatUpdate.messages.length > 1) console.log(chatUpdate.messages)
+        let mr = chatUpdate.messages[chatUpdate.messages.length - 1]
+        
+
+            try {
+                let user = db.data && db.data.users ? db.data.users[m.sender] : null
+                if (user) {
+                    user.exp = user.exp ? user.exp + 1 : 1
+                    user.level = user.level ? user.level : 1
+                    user.role = user.role ? user.role : 'Newbie'
+                } else if (db.data && db.data.users) {
+                    db.data.users[m.sender] = {
+                        exp: 1,
+                        level: 1,
+                        role: 'Newbie',
+                    }
+                } else {
+                    console.error('Database users is not initialized')
+                }
+            } catch (e) {
+                console.error(e)
+            }
+            
+
+            let user = db.data.users[m.sender]
+            let expPoints = Math.floor(Math.random() * 10) + 1; // 1-10 for messages
+            if (isCmd) expPoints += Math.floor(Math.random() * 40) + 10; // 10-50 for commands
+            user.exp += expPoints;
+            console.log(user);
+        
+function writeData() {
+  fs.writeFileSync('./database.json', JSON.stringify(user, null, 4));
+}
+
+            let { exp, level } = user;
+            let currentExp = exp - xpRange(level - 1, global.multiplier).max;
+            if (currentExp >= exp) {
+                user.level++;
+                user.exp -= xp;
+                if (m.isGroup) {
+                    const pushname = m.pushName || "No Name";
+                    await Maria.sendMessage(m.chat, {
+                        text: `${pushname}, congratulations! You've leveled up to *${user.level}*! Keep being active to level up more.\nCurrent XP: ${user.exp}/${xpRange(user.level, global.multiplier).xp}`
+                    }, m);
+                }
+            }
+            function xpRange(level, multiplier = global.multiplier || 1) {
+                if (level < 0) throw new TypeError('level cannot be negative value')
+                level = Math.floor(level)
+                let min = level === 0 ? 0 : Math.round(Math.pow(level, global.xpGrowth) * multiplier) + 1
+                let max = Math.round(Math.pow(++level, global.xpGrowth) * multiplier)
+                return {
+                    min,
+                    max,
+                        xp: max - min
+                }
+            }
+            function sort(property, ascending = true) {
+                if (property) return (...args) => args[ascending & 1][property] - args[!ascending & 1][property]
+                else return (...args) => args[ascending & 1] - args[!ascending & 1]
+            }
+
+            function toNumber(property, _default = 0) { 
+                if (property) return (a, i, b) => {
+                    return {...b[i], [property]: a[property] === undefined ? _default : a[property] }
+                }
+                else return a => a === undefined ? _default : a
+            }
+
+            function enumGetKey(a) {
+                return a.jid 
+
+            }  
+            function getNextRank(level) {
+                let arr = Object.keys(global.multiplier)
+                let position = false
+                Object.keys(global.multiplier).forEach((key) => {
+                    if (level <= key) {
+                        position = key
+                    }
+                })
+                if (position !== false) {
+                    return arr[position]
+                }
+            }
+
+            
+            let rolee = (user.level <= 3) ? 'Warrior V'
+                            : ((user.level >= 3) && (user.level <= 6)) ? 'Warrior IV'
+                                    : ((user.level >= 6) && (user.level <= 9)) ? 'Warrior III'
+                                            : ((user.level >= 9) && (user.level <= 12)) ? 'Warrior II'
+                                                    : ((user.level >= 12) && (user.level <= 15)) ? 'Warrior I'
+                                                            : ((user.level >= 15) && (user.level <= 18)) ? 'Elite V'
+                                                                    : ((user.level >= 18) && (user.level <= 21)) ? 'Elite IV'
+                                                                            : ((user.level >= 21) && (user.level <= 24)) ? 'Elite III'
+                                                                                    : ((user.level >= 24) && (user.level <= 27)) ? 'Elite II'
+                                                                                            : ((user.level >= 27) && (user.level <= 30)) ? 'Elite I'
+                                                                                                    : ((user.level >= 30) && (user.level <= 33)) ? 'Master V'
+                                                                                                            : ((user.level >= 33) && (user.level <= 36)) ? 'Master IV'
+                                                                                                                    : ((user.level >= 36) && (user.level <= 39)) ? 'Master III' 
+                                                                                                                            : ((user.level >= 39) && (user.level <= 42)) ? 'Master II'
+                                                                                                                                    : ((user.level >= 42) && (user.level <= 45)) ? 'Master I'
+                                                                                                                                            : ((user.level >= 45) && (user.level <= 48)) ? 'Grand Master V'
+                                                                                                                                                    : ((user.level >= 48) && (user.level <= 51)) ? 'Grand Master IV'
+                                                                                                                                                            : ((user.level >= 51) && (user.level <= 54)) ? 'Grand Master III'
+                                                                                                                                                                    : ((user.level >= 54) && (user.level <= 57)) ? 'Grand Master II'
+                                                                                                                                                                            : ((user.level >= 57) && (user.level <= 60)) ? 'Grand Master I'
+                                                                                                                                                                                    : ((user.level >= 60) && (user.level <= 63)) ? 'Epic V'
+                                                                                                                                                                                            : ((user.level >= 63) && (user.level <= 66)) ? 'Epic IV'
+                                                                                                                                                                                                    : ((user.level >= 66) && (user.level <= 69)) ? 'Epic III'
+                                                                                                                                                                                                            : ((user.level >= 69) && (user.level <= 71)) ? 'EpicII'
+                                                                                                                                                                                                                    : ((user.level >= 71) && (user.level <= 74)) ? 'Epic I'
+                                                                                                                                                                                                                            : ((user.level >= 74) && (user.level <= 77)) ? 'Legend V'
+                                                                                                                                                                                                                                    : ((user.level >= 77) && (user.level <= 80)) ? 'Legend IV'
+                                                                                                                                                                                                                                            : ((user.level >= 80) && (user.level <= 83)) ? 'Legend III'
+                                                                                                                                                                                                                                                    : ((user.level >= 83) && (user.level <= 86)) ? 'Legend II'
+                                                                                                                                                                                                                                                            : ((user.level >= 86) && (user.level <= 89)) ? 'Legend I'
+                                                                                                                                                                                                                                                                    : ((user.level >= 89) && (user.level <= 91)) ? 'Mythic V'
+                                                                                                                                                                                                                                                                            : ((user.level >= 91) && (user.level <= 94)) ? 'Mythic IV'
+                                                                                                                                                                                                                                                                                    : ((user.level >= 94) && (user.level <= 97)) ? 'Mythic III'
+                                                                                                                                                                                                                                                                                            : ((user.level >= 97) && (user.level <= 100)) ? 'Mythic II'
+                                                                                                                                                                                                                                                                                                    : ((user.level >= 100) && (user.level <= 500)) ? 'Legende'
+
+                                                                                                                                                                                                                                                                                                            : ((user.level >= 500) && (user.level <= 9999)) ? 'FAST AN DER SPIZE'
+
+                                                                                                                                                                                                                                                                                                                    : ((user.level >= 10000) && (user.level <= 17000)) ? 'EIF FAKE OWNER' : 'EIF FAKE OWNER'
+                    user.role = rolee
+                   
+            db.write()
             switch (command) {
+                        
+
             case 'antilink': {
                             if (!m.isGroup) return reply(mess.group)
                 if (!isAdmins && !isCreator) return reply(mess.admin)
@@ -1261,13 +1460,13 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
         break
       case "support":
      
-        let tex = `📍Willkommen beim Entwickler Hub!📍
+        let tex = `ich habe deine anfrage erfolgreich zur support gruppe weitergeleitet hier ist die gruppe:
 
 https://chat.whatsapp.com/KSM8yCpBHGUGkb2f3zfGz7`
 
-        await Maria.sendMessage(m.sender,{ image: {url: "./Gallery/sup.jpg"}, caption: `${tex}` },);
-
-        await Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch2.jpg" }, caption: 'Ich habe dir den Link zur Supportgruppe per Pn zukommen lassen.\n Pls check.', gifPlayback: true }, { quoted: m });
+        await Maria.sendMessage(m.chat,{ text: `${tex}` },);
+ let teks = `── 「 Antwort 📝」 ──\n\n*Angefragt*: ${m.sender} 🔢\n*Message*: ${text} \n*Antwort* :`
+        await Maria.sendMessage("120363225734488240@g.us",{ text: teks, gifPlayback: true }, { quoted: m });
         break
 
       case "info":
@@ -1578,7 +1777,6 @@ ${readmore}
 │⊳ ⚙️ ${prefix}runtime
 │⊳ ⚙️ ${prefix}ping
 │⊳ ⚙️ ${prefix}owner
-│⊳ ⚙️ ${prefix}script
 └──────────⊰
 
 ┌──⊰ _*🌐Gruppen🌐*_
@@ -1619,13 +1817,10 @@ ${readmore}
 └──────────⊰
 ┌──⊰ _*📂download📂*_
 │⊳ 📥 ${prefix}play
-│⊳ 📥 ${prefix}ytmp3
-│⊳ 📥 ${prefix}ytmp4
-│⊳ 📥 ${prefix}igimage 
-│⊳ 📥 ${prefix}igvideo 
-│⊳ 📥 ${prefix}gitclone
-│⊳ 📥 ${prefix}pinterest
-│⊳ 📥 ${prefix}apk
+└──────────⊰
+┌──⊰ _*🔖support🔖*_
+│⊳ 📥 ${prefix}tagteam
+│⊳ 📥 ${prefix}support
 └──────────⊰
 ┌──⊰ _*🎐SnapBlend🎐*_
 │⊳🎀 ${prefix}shadow
@@ -1685,8 +1880,10 @@ reply(`Reply to a Video with Caption ${prefix + command}`)
 }
 }
 break
-
-
+                    case "xp": {
+                           Maria.sendMessage(m.chat,{text:`\n*${pushname}* \n\n*Level:* ${user.level}\n*Xp:* ${user.exp}\n*Role:* ${user.role}\n`}) 
+                    }
+                    break
 case "couple":
         {
           if (!m.isGroup) return reply(mess.group);
@@ -2057,16 +2254,6 @@ case 'farewell': {
 }
 break;			    
 
-case 'git': case 'gitclone':
-if (!args[0]) return reply(`Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/AYUSH-PANDEY023/Maria-Md `)
-if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcMaria(`Link invalid!!`)
-let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
-    let [, user, repo] = args[0].match(regex1) || []
-    repo = repo.replace(/.git$/, '')
-    let url = `https://api.github.com/repos/${user}/${repo}/zipball`
-    let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
-    Maria.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => reply(mess.error))
-break
 
 case '':
     if (isCmd) {
@@ -2314,7 +2501,7 @@ if(isCmd){
           reply (`No such command, Baka!`)
   
       }	 			
-
+db.write()
 		
             default:
                 if (budy.startsWith('=>')) {
