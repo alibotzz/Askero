@@ -23,7 +23,7 @@ global.wm = "ღĹíͥőͣńͫღ botz inc."
 global.link = 'https://chat.whatsapp.com/EGqCW9HeVoq3W2KmgX3Ri0'
 
 //custom prefix
-global.prefa = ['!']
+global.prefa = ['/']
 
 //false=disable and true=enable
 global.welcome = false //auto welcome
@@ -34,7 +34,7 @@ global.autoread = false //auto read messages
 global.autobio = false //auto update bio
 global.anti212 = true //auto block +212
 global.autoread_status = false //auto view status/story
-
+global.multiplier = 100
 
 
 //reply messages
