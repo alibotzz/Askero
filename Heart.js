@@ -980,7 +980,7 @@ case 'tag': case 'tagall': case 'all':{
   
  *Nachricht : ${args.join(" ") ? args.join(" ") : 'keine Nachricht'}*\n\n`
  for (let mem of participants) {
- teks += `🔮 @${mem.id.split('@')[0]}\n`
+ teks += `✨ @${mem.id.split('@')[0]}\n`
  }
  Maria.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
  }
@@ -1003,9 +1003,9 @@ case 'tag': case 'tagall': case 'all':{
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (args[0] === 'close') {
-                    await Maria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_SUCCESSFULLY CLOSED THE GRUP_\n\ngrup has been closed for the time being 😽*`)).catch((err) => reply(json(err)))
+                    await Maria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_DIE GRUPPE WURDE ERFOLGREICH GESCHLOSSEN_*.`)).catch((err) => reply(json(err)))
                 } else if (args[0] === 'open') {
-                    await Maria.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`*THE GROUP HAS BEEN OPENED SUCCESSFULLY*`)).catch((err) => reply(json(err)))
+                    await Maria.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`*_DIE GRUPPE WURDE ERFOLGREICH GEÖFFNET_*.`)).catch((err) => reply(json(err)))
                 } else {
                     reply(`Mode ${command}\n\n\nTippe ${prefix + command} open/close`)
                 }
@@ -1087,7 +1087,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
                     })
                     await fs.unlinkSync(encmedia)
                 } else if (isVideo || /video/.test(mime)) {
-                    if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
+                    if ((quoted.msg || quoted).seconds > 11) return reply('Maximal 10 sekunden!')
                     let media = await quoted.download()
                     let encmedia = await Maria.sendVideoAsSticker(m.chat, media, m, {
                         packname: global.stickername,
@@ -1095,7 +1095,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
                     })
                     await fs.unlinkSync(encmedia)
                 } else {
-                    return reply(`Send Images/Videos With Captions ${prefix + command}\nVideo Duration 1-9 Seconds`)
+                    return reply(` Bild/Video? ${prefix + command}\nVideo Duration 1-9 Seconds`)
                 }
             }
             break
@@ -1263,14 +1263,14 @@ break
             break
             case 'toonce':
             case 'toviewonce': {
-                if (!quoted) return reply(`Reply Image/Video`)
+                if (!quoted) return reply(` Bild/Video?`)
                 if (/image/.test(mime)) {
                     anuan = await Maria.downloadAndSaveMediaMessage(quoted)
                     Maria.sendMessage(m.chat, {
                         image: {
                             url: anuan
                         },
-                        caption: `Here you go!`,
+                        caption: `Tadaaa✨!`,
                         fileLength: "999",
                         viewOnce: true
                     }, {
@@ -1282,7 +1282,7 @@ break
                         video: {
                             url: anuanuan
                         },
-                        caption: `Here you go!`,
+                        caption: `Tadaaa✨!`,
                         fileLength: "99999999",
                         viewOnce: true
                     }, {
@@ -1785,7 +1785,7 @@ ${readmore}
 │⊳ ⛓️ ${prefix}opentime
 │⊳ ⛓️ ${prefix}kick
 │⊳ ⛓️ ${prefix}promote
-│⊳ ⛓️ ${prefix}tagadmin (schreibe eine Nachricht hinzu um Gruppenadmins zu markieren)
+│⊳ ⛓️ ${prefix}tagadmin (mit text)
 │⊳ ⛓️ ${prefix}demote
 │⊳ ⛓️ ${prefix}setdesc
 │⊳ ⛓️ ${prefix}setppgc
@@ -1796,7 +1796,6 @@ ${readmore}
 │⊳ ⛓️ ${prefix}editinfo
 │⊳ ⛓️ ${prefix}gclink
 │⊳ ⛓️ ${prefix}revoke
-│⊳ ⛓️ ${prefix}listonline
 └──────────⊰
 
 ┌──⊰ _*🎉FUN🎉*_
@@ -1809,8 +1808,6 @@ ${readmore}
 │⊳🎟️ ${prefix}lovelycheck
 │⊳🎟️ ${prefix}prettycheck
 │⊳🎟️ ${prefix}hornycheck
-│⊳🎟️ ${prefix}lesbiancheck
-│⊳🎟️ ${prefix}lesbicheck
 │⊳🎟️ ${prefix}lesbiancheck
 │⊳🎟️ ${prefix}cutecheck
 │⊳🎟️ ${prefix}gaycheck
@@ -2315,7 +2312,7 @@ case 'naturetypography':
 case 'quotesunder':
 case 'shinetext':{
 
-if (!q) return reply(`🔮Example : ${prefix+command} Ayush`) 
+if (!q) return reply(`🔮Beispiel : ${prefix+command} Daddy`) 
 let link
 if (/stonetext/.test(command)) link = 'https://photooxy.com/online-3d-white-stone-text-effect-utility-411.html'
 if (/writeart/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/write-art-quote-on-wood-heart-370.html'
@@ -2422,7 +2419,7 @@ https://chat.whatsapp.com/${response}
 *Tech-Team* :
 
 -💎 *セバスチャン* (Leitung)
--🕹️ *(Name)* 
+-🕹️ *(Alex)* 
 -🕹️ *(Name)*
 
 *Mod-Team* :
