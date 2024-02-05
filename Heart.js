@@ -1007,7 +1007,7 @@ case 'tag': case 'tagall': case 'all':{
                 } else if (args[0] === 'open') {
                     await Maria.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`*THE GROUP HAS BEEN OPENED SUCCESSFULLY*`)).catch((err) => reply(json(err)))
                 } else {
-                    reply(`Mode ${command}\n\n\nType ${prefix + command}open/close`)
+                    reply(`Mode ${command}\n\n\nTippe ${prefix + command} open/close`)
                 }
                 break
             case 'editinfo':
@@ -1031,7 +1031,7 @@ case 'tag': case 'tagall': case 'all':{
           let response = await Maria.groupInviteCode(m.chat);
           Maria.sendText(
             m.sender,
-            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- ღĹíőͥńͣ BͫØ₸ღ\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
+            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- ღĹíőͥńͣ BͫØ₸ღ\n\n🔖Gruppen 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺ruppen 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
             m,
             { detectLink: true }
           );
@@ -1323,10 +1323,10 @@ break
 
             case 'afk':
                 if (!m.isGroup) return reply(mess.group)
-                if (isAfkOn) return reply("Already afk")
+                if (isAfkOn) return reply("Bereits Afk")
                 let reason = text ? text : 'Nothing.'
                 afk.addAfkUser(m.sender, Date.now(), reason, _afk)
-                reply(`@${m.sender.split('@')[0]} Currently AFK\nWith reason : ${reason}`)
+                reply(`@${m.sender.split('@')[0]} Ist AFK\nGrund : ${reason}`)
                 break
       case 'qc': {
                 const {
@@ -1345,7 +1345,7 @@ break
 
 case 'play':  case 'song': {
 Maria.sendMessage(from, { react: { text: "📥", key: m.key }}) 
-if (!text) return reply(`Example : ${prefix + command} anime whatsapp status`)
+if (!text) return reply(`Beispiel : ${prefix + command} `)
 const Ayushplaymp3 = require('./Gallery/lib/ytdl2')
 let yts = require("youtube-yts")
         let search = await yts(text)
@@ -1764,7 +1764,7 @@ case 'truth':
 │⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: *ღĹíőͥńͣ BͫØ₸ღ*
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  [ *${prefix}* ]
 │⋊ 𝕆𝕨𝕟𝕖𝕣: ${prefix}owner
-│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕙𝕒𝕥 𝔾𝕣𝕠𝕦𝕡: https://chat.whatsapp.com/EGqCW9HeVoq3W2KmgX3Ri0
+│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕙𝕒𝕥 𝔾𝕣𝕠𝕦𝕡: https://chat.whatsapp.com/C3i7IjruiUHEY2FOBd0xfb
 ╰────────────┈平和
 Verfügbare Befehle.🔖
 ${readmore}
@@ -1785,6 +1785,7 @@ ${readmore}
 │⊳ ⛓️ ${prefix}opentime
 │⊳ ⛓️ ${prefix}kick
 │⊳ ⛓️ ${prefix}promote
+│⊳ ⛓️ ${prefix}tagadmin (schreibe eine Nachricht hinzu um Gruppenadmins zu markieren)
 │⊳ ⛓️ ${prefix}demote
 │⊳ ⛓️ ${prefix}setdesc
 │⊳ ⛓️ ${prefix}setppgc
@@ -1859,7 +1860,6 @@ ${readmore}
 │⊳ 🏮 ${prefix}emojimix
 │⊳ 🏮 ${prefix}circlevideo
 │⊳ 🏮 ${prefix}google
-│⊳ 🏮 ${prefix}pinterest
 │⊳ 🏮 ${prefix}dalle
 │⊳ 🏮 ${prefix}gpt
 └──────────⊰
