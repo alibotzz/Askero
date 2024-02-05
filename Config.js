@@ -39,14 +39,14 @@ global.multiplier = 100
 
 //reply messages
 global.mess = {
-    done: '*here you go!* \n\n*🎀 ღĹíőͥńͣ BͫØ₸ღ 🎀*\n\n*🧩 Bot link:* \nhttps://github.com/ExiqonBot/Bot-Launch-V1\n',
+    done: '*Tadaaa✨!* \n\n* ღĹíőͥńͣ BͫØ₸ღ *\n\n*🧩 Bot link:* \nhttps://telegra.ph/file/9fb77b8a49fdfd5d55661.jpg\n',
     prem: '*Dieser Befehl kann nur von Premium-Nutzern verwendet werden.*',
     admin: '*Dieser Befehl kann nur von einem Admin verwendet werden.*',
     botAdmin: '*Dieser Befehl kann nur verwendet werden wenn der Bot Gruppenadmin ist.* ',
     owner: '*Dieser Befehl kann nur vom Besitzer des Bots verwendet werden.*',
     group: '*Dieser Befehl ist nur für Gruppen verfügbar.*',
     private: '*Dieser Befehl ist nur für private Chats verfügbar.*',
-    wait: '*In Bearbeitung...* ',    
+    wait: '*Un momento por favor ich arbeite daran...* ',    
     error: '*Error!*',
 }
 
