@@ -1454,7 +1454,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
       case 'bot': case 'hilfe': case 'funk nicht':
        
         
-        let txxt = `👋🏻 Hey *${pushname}*, Ich bin ღĹíőͥńͣ BͫØ₸ღ*📍\nEin Whatsapp Bot erstellt von: ღƐ×ͥΐզͣօͫήღ \n\n Nutze den Befehl *${prefix}support* für Hilfe`
+        let txxt = `👋🏻 Hey *${pushname}*, Ich bin *ღĹíőͥńͣ BͫØ₸ღ*📍\nEin Whatsapp Bot erstellt von: ღƐ×ͥΐզͣօͫήღ \n\n Nutze den Befehl *${prefix}support* für Hilfe`
 
         Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch1.jpg" }, caption: txxt, gifPlayback: true }, { quoted: m });
         break
