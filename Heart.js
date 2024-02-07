@@ -2411,20 +2411,20 @@ https://chat.whatsapp.com/${response}
 -👑 *Cthulhu* (Inhaber)
 -👑 *𝕯𝖆𝖗𝖙𝖍 𝕾𝖎𝖉𝖎𝖔𝖚𝖘* (Inhaber)
 
-*Projektleitung* :
+*Teamleitung* :
 
--👀 *𝕯𝖆𝖗𝖙𝖍 𝕾𝖎𝖉𝖎𝖔𝖚𝖘* (Leitung)
--👀 *⸸ℑꈤᥴꪊ𝕭ꪊᦓ⸸* (Stv.Leitung)
+-👀 *⸸ℑꈤᥴꪊ𝕭ꪊᦓ⸸* (Leitung)
+-👀 *(Name)* (Stv.Leitung)
 
 *Tech-Team* :
 
 -💎 *セバスチャン* (Leitung)
--🕹️ *(Alex)* 
+-🕹️ *Alex* 
 -🕹️ *(Name)*
 
 *Mod-Team* :
 
--💎 *(Name)* (Leitung)
+-💎 *Ian.H* (Leitung)
 -👮🏻‍♂️ *(Name)* (Mod)
 -👮🏻‍♂️ *(Name)* (Mod)
 
@@ -2433,7 +2433,7 @@ https://chat.whatsapp.com/${response}
 
 -💎 *GoldtraderJD* (Leitung)
 -👷🏻‍♂️ *$nix $nus* (Supporter)
--👷🏻‍♂️ *(Name)* (Supporter)
+-👷🏻‍♂️ *Toruto* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
 
 \n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Alternativ besteht die Möglichkeit mit *${prefix}support* der Supportgruppe beizutreten und uns euer Anliegen dort zu schildern.\n\n*✨️Danke für eure Unterstützung, euer Bot-Team.* `)
