@@ -151,4 +151,4 @@ npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 
 * [`🧧Cthulhu`](https://telegra.ph/file/a5b56b967fb935cf1a28c.jpg)
 
-* [`🧧❥❥☠⃞🇨🇦⃝Leͥgeͣnͫd༻ᴳᵃᵇʳᵘ࿐`](https://telegra.ph/file/40194d06a2e041835136c.jpg)
+* [`🧧𝕯𝖆𝖗𝖙𝖍 𝕾𝖎𝖉𝖎𝖔𝖚𝖘`](https://telegra.ph/file/40194d06a2e041835136c.jpg)
