@@ -1446,7 +1446,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 //////////////////////////////
             case "rules":
       
-        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze /support,um Probleme dem Support-Team zu melden.\n\n*--->* Um ღĹíőͥńͣ BͫØ₸ღ zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: *!owner/!mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der */menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ ღĹíͥőͣńͫღ Botz inc* `
+        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze /support,um Probleme dem Support-Team zu melden.\n\n*--->* Um ღĹíőͥńͣ BͫØ₸ღ zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: */owner./mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der */menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ ღĹíͥőͣńͫღ Botz inc* `
 
         Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
@@ -1460,12 +1460,12 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
         break
       case "support":
      
-        let tex = `Ich habe deine Anfrage erfolgreich an das Support-Team weitergeleitet. Hier ist der Link zur Supportgruppe:
+        let tex = `Vielen Dank für deine Anfrage, ein Supporter wird sich so schnell wie möglich bei dir melden. Hier ist der Link zur Supportgruppe:
 
 https://chat.whatsapp.com/KSM8yCpBHGUGkb2f3zfGz7`
 
         await Maria.sendMessage(m.chat,{ text: `${tex}` },);
- let teks = `── 「 Antwort 📝」 ──\n\n*Angefragt*: ${m.sender} 🔢\n*Message*: ${text} \n*Antwort* :Vielen Dank für deine Anfrage, ein Supporter wird sich so schnell wie möglich bei dir melden.`
+ let teks = `── 「 Antwort 📝」 ──\n\n*Angefragt*: ${m.sender} 🔢\n*Message*: ${text} \n*Antwort* :`
         await Maria.sendMessage("120363225734488240@g.us",{ text: teks, gifPlayback: true }, { quoted: m });
         break
 
@@ -2164,7 +2164,7 @@ case 'hidetag': {
       }
         break;  
 			    
-case '/runtime': {
+case '${prefix}runtime': {
             	let lowq = `*Bot ist Aktiv seit:*\n🎉 *${runtime(process.uptime())}*`
                 reply(lowq)
             	}
