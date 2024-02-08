@@ -1343,7 +1343,7 @@ break
             }
             break
 
-case 'play':  case 'song': {
+case '/play':  case 'song': {
 Maria.sendMessage(from, { react: { text: "📥", key: m.key }}) 
 if (!text) return reply(`Beispiel : ${prefix + command} `)
 const Ayushplaymp3 = require('./Gallery/lib/ytdl2')
@@ -1446,7 +1446,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 //////////////////////////////
             case "rules":
       
-        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze !support, um den Link zur offiziellen Supportgruppe per Pn zu erhalten.\n\n*--->* Um ღĹíőͥńͣ BͫØ₸ღ zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: *!owner/!mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der *!menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ ღĹíͥőͣńͫღ Botz inc* `
+        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze /support,um Probleme dem Support-Team zu melden.\n\n*--->* Um ღĹíőͥńͣ BͫØ₸ღ zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: *!owner/!mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der */menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ ღĹíͥőͣńͫღ Botz inc* `
 
         Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
@@ -1465,7 +1465,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 https://chat.whatsapp.com/KSM8yCpBHGUGkb2f3zfGz7`
 
         await Maria.sendMessage(m.chat,{ text: `${tex}` },);
- let teks = `── 「 Antwort 📝」 ──\n\n*Angefragt*: ${m.sender} 🔢\n*Message*: ${text} \n*Antwort* :`
+ let teks = `── 「 Antwort 📝」 ──\n\n*Angefragt*: ${m.sender} 🔢\n*Message*: ${text} \n*Antwort* :Vielen Dank für deine Anfrage, ein Supporter wird sich so schnell wie möglich bei dir melden.`
         await Maria.sendMessage("120363225734488240@g.us",{ text: teks, gifPlayback: true }, { quoted: m });
         break
 
@@ -2164,7 +2164,7 @@ case 'hidetag': {
       }
         break;  
 			    
-case 'runtime': {
+case '/runtime': {
             	let lowq = `*Bot ist Aktiv seit:*\n🎉 *${runtime(process.uptime())}*`
                 reply(lowq)
             	}
@@ -2397,7 +2397,7 @@ https://chat.whatsapp.com/${response}
         case 'test': case 'p': case 'ping': 
         let timestampe = speed()
         let latensie = speed() - timestampe
-         reply(`🧧Test erfolgreich, Bot ist aktiv\n\n📍*ping* ${latensie.toFixed(4)} milisekunden\n\n🎀Type ${prefix}menu to display the menu`)
+         reply(`🧧Test erfolgreich, Bot ist aktiv\n\n📍*ping* ${latensie.toFixed(4)} milisekunden\n\n Tippe ${prefix}menu um meine Befehle zu sehen`)
         break   
     
         
@@ -2418,14 +2418,14 @@ https://chat.whatsapp.com/${response}
 
 *Tech-Team* :
 
--💎 *セバスチャン* (Leitung)
+-💎 *Collin* (Leitung)
 -🕹️ *Alex* 
 -🕹️ *(Name)*
 
 *Mod-Team* :
 
--💎 *Ian.H* (Leitung)
--👮🏻‍♂️ *(Name)* (Mod)
+-💎 *Cthulhu* (Leitung)
+-👮🏻‍♂️ *Ian.H* (Mod)
 -👮🏻‍♂️ *(Name)* (Mod)
 
 
@@ -2434,9 +2434,9 @@ https://chat.whatsapp.com/${response}
 -💎 *GoldtraderJD* (Leitung)
 -👷🏻‍♂️ *$nix $nus* (Supporter)
 -👷🏻‍♂️ *Toruto* (Supporter)
--👷🏻‍♂️ *(Name)* (Supporter)
+-👷🏻‍♂️ *Jessi* (Supporter)
 
-\n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Alternativ besteht die Möglichkeit mit *${prefix}support* der Supportgruppe beizutreten und uns euer Anliegen dort zu schildern.\n\n*✨️Danke für eure Unterstützung, euer Bot-Team.* `)
+\n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Um eine Supportanfrage zu stellen,benutzt bitte *${prefix}support* gefolgt von eurem Anliegen.\n\n*✨️Danke für eure Unterstützung, euer Bot-Team.* `)
         break   
     case 'addmod':
       case 'addowner':
