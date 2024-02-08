@@ -1095,7 +1095,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
                     })
                     await fs.unlinkSync(encmedia)
                 } else {
-                    return reply(` Bild/Video? ${prefix + command}\nVideo Duration 1-9 Seconds`)
+                    return reply(` Bild/Video? ${prefix + command}\nVideo länge 1-9 Sekunden`)
                 }
             }
             break
@@ -1857,8 +1857,6 @@ ${readmore}
 │⊳ 🏮 ${prefix}emojimix
 │⊳ 🏮 ${prefix}circlevideo
 │⊳ 🏮 ${prefix}google
-│⊳ 🏮 ${prefix}dalle
-│⊳ 🏮 ${prefix}gpt
 └──────────⊰
 🍂 To enable NSFW (Admin only!), enter  *${prefix}nsfw* 
 
@@ -1939,26 +1937,16 @@ case 'public': {
         if (!m.isGroup) return reply(mess.group);
         
         const nsfwmenu=`┌──⊰ _*🔞NSFW 🔞*_
-│⊳ 💦  ${prefix}blowjob
-│⊳ 💦  ${prefix}cum
-│⊳ 💦  ${prefix}foot
-│⊳ 💦  ${prefix}gangbang
-│⊳ 💦  ${prefix}hentai
-│⊳ 💦  ${prefix}pussy
-│⊳ 💦  ${prefix}ass
-│⊳ 💦  ${prefix}trap
-│⊳ 💦  ${prefix}maal
-│⊳ 💦  ${prefix}ʀɪʙʙᴏɴꜱ
-│⊳ 💦  ${prefix}ʜᴀᴛꜱᴜɴᴇᴍɪᴋᴜ
-│⊳ 💦  ${prefix}ʜᴇᴀᴅʙᴀɴᴅ
-│⊳ 💦  ${prefix}ꜰᴏxɢɪʀʟ
-│⊳ 💦  ${prefix}ᴀɴɪᴍᴀʟᴇᴀʀꜱ
-│⊳ 💦  ${prefix}ʙʀᴀ
-│⊳ 💦  ${prefix}ꜱᴋɪʀᴛ
-│⊳ 💦  ${prefix}ʙʀᴇᴀꜱᴛꜱ
-│⊳ 💦  ${prefix}ᴛᴀᴛᴛᴏᴏ
-│⊳ 💦  ${prefix}ᴄʜᴀɪɴ
-└──────────⊰ 
+┌──⊰ 🔞NSFW 🔞
+│⊳ 💦  /blowjob
+│⊳ 💦  /cum
+│⊳ 💦  /pussy
+│⊳ 💦  /ass
+│⊳ 💦  /ʙʀᴀ
+│⊳ 💦  /ꜱᴋɪʀᴛ
+│⊳ 💦  /ʙoobs
+│⊳ 💦  /ᴛᴀᴛᴛᴏᴏ
+└──────────⊰
 `
         Maria.sendMessage(m.chat, { image: { url: "./Gallery/nsfw.jpg" }, caption: nsfwmenu }, { quoted: m });
         break
@@ -2133,7 +2121,7 @@ case 'hidetag': {
  if (!text) return replay(`*Gebe deine Nachricht an die Admins ein*`)
  let teks = `*🦁Gruppen-Admins🦁*
   
- *Message : ${text}*\n\n`
+ *Nachricht : ${text}*\n\n`
  for (let mem of groupAdmins) {
  teks += `🦁 @${mem.split('@')[0]}\n`
  }
@@ -2164,7 +2152,7 @@ case 'hidetag': {
       }
         break;  
 			    
-case '${prefix}runtime': {
+case 'runtime': {
             	let lowq = `*Bot ist Aktiv seit:*\n🎉 *${runtime(process.uptime())}*`
                 reply(lowq)
             	}
@@ -2425,16 +2413,16 @@ https://chat.whatsapp.com/${response}
 *Mod-Team* :
 
 -💎 *Cthulhu* (Leitung)
+-👮🏻‍♂️ *Toruto* (Mod)
 -👮🏻‍♂️ *Ian.H* (Mod)
--👮🏻‍♂️ *(Name)* (Mod)
 
 
 *Support Team* :
 
 -💎 *GoldtraderJD* (Leitung)
 -👷🏻‍♂️ *$nix $nus* (Supporter)
--👷🏻‍♂️ *Toruto* (Supporter)
 -👷🏻‍♂️ *Jessi* (Supporter)
+-👷🏻‍♂️ *(Name)* (Supporter)
 
 \n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Um eine Supportanfrage zu stellen,benutzt bitte *${prefix}support* gefolgt von eurem Anliegen.\n\n*✨️Danke für eure Unterstützung, euer Bot-Team.* `)
         break   
