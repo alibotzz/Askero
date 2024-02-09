@@ -1984,7 +1984,7 @@ reply('Successfully deactivating nsfw mode in this group ✔️')
   
 case 'chain':
 case 'tattoo':
-case 'boobs':
+case 'breasts':
 case 'skirt':
 case 'bra':
 case 'animalears':
@@ -1998,10 +1998,10 @@ case 'ribbons':
     Maria.sendMessage(m.chat, { caption: 'OMG🥵', image: { url: waifpoudd.data.url } }, { quoted: m });
     break;
     
-        case 'boobs':
+        case 'blowjob':
  if (!m.isGroup) return reply(mess.group);
    if (!isNsfw) return reply(mess.nsfw);
-var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/boobs.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/blowjob.json'))
 var Mariayresult = pickRandom(ahegaonsfw)
 Maria.sendMessage(m.chat, { caption: mess.done, image: { url: Mariayresult.url } }, { quoted: m })
 break
