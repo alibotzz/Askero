@@ -2420,8 +2420,8 @@ https://chat.whatsapp.com/${response}
 *Support Team* :
 
 -💎 *GoldtraderJD* (Leitung)
--👷🏻‍♂️ *$nix $nus* (Supporter)
 -👷🏻‍♂️ *Jessi* (Supporter)
+-👷🏻‍♂️ *(Name)* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
 
 \n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Um eine Supportanfrage zu stellen,benutzt bitte *${prefix}support* gefolgt von eurem Anliegen.\n\n*✨️Danke für eure Unterstützung, euer Bot-Team.* `)
