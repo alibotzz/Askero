@@ -1343,7 +1343,7 @@ break
             }
             break
 
-case '/play':  case 'song': {
+case 'play':  case 'song': {
 Maria.sendMessage(from, { react: { text: "📥", key: m.key }}) 
 if (!text) return reply(`Beispiel : ${prefix + command} `)
 const Ayushplaymp3 = require('./Gallery/lib/ytdl2')
