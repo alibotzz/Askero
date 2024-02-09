@@ -2420,7 +2420,7 @@ https://chat.whatsapp.com/${response}
 *Support Team* :
 
 -💎 *GoldtraderJD* (Leitung)
--👷🏻‍♂️ *Jessi* (Supporter)
+-👷🏻‍♂️ *(Name)* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
 
