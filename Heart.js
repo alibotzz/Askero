@@ -1938,13 +1938,13 @@ case 'public': {
         
         const nsfwmenu=`┌──⊰ _*🔞NSFW 🔞*_
 ┌──⊰ 🔞NSFW 🔞
-│⊳ 💦  /blowjob
+│⊳ 💦  /boobs
 │⊳ 💦  /cum
 │⊳ 💦  /pussy
 │⊳ 💦  /ass
 │⊳ 💦  /ʙʀᴀ
 │⊳ 💦  /ꜱᴋɪʀᴛ
-│⊳ 💦  /ʙoobs
+│⊳ 💦  /foot
 │⊳ 💦  /ᴛᴀᴛᴛᴏᴏ
 └──────────⊰
 `
@@ -1984,7 +1984,7 @@ reply('Successfully deactivating nsfw mode in this group ✔️')
   
 case 'chain':
 case 'tattoo':
-case 'breasts':
+case 'boobs':
 case 'skirt':
 case 'bra':
 case 'animalears':
@@ -1998,7 +1998,7 @@ case 'ribbons':
     Maria.sendMessage(m.chat, { caption: 'OMG🥵', image: { url: waifpoudd.data.url } }, { quoted: m });
     break;
     
-        case 'blowjob':
+        case 'boobs':
  if (!m.isGroup) return reply(mess.group);
    if (!isNsfw) return reply(mess.nsfw);
 var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/blowjob.json'))
