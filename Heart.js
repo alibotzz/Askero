@@ -2001,7 +2001,7 @@ case 'ribbons':
         case 'boobs':
  if (!m.isGroup) return reply(mess.group);
    if (!isNsfw) return reply(mess.nsfw);
-var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/blowjob.json'))
+var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/boobs.json'))
 var Mariayresult = pickRandom(ahegaonsfw)
 Maria.sendMessage(m.chat, { caption: mess.done, image: { url: Mariayresult.url } }, { quoted: m })
 break
