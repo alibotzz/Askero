@@ -27,7 +27,7 @@ const _ = require('lodash')
 const PORT = process.env.PORT || 3000
 const { LowSync, JSONFileSync } = require('./lib/lowdb')
 const FileSync = require('./lib/lowdb/adapters/JSONFileSync')
-global.modnumber = '49491741711168' 
+global.modnumbers = ['49491741711168', '491773379918', '436504919106000']; 
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
 const isnsfw = JSON.parse(fs.readFileSync('./Gallery/database/nsfw.json'));
@@ -1998,7 +1998,7 @@ case 'ribbons':
     Maria.sendMessage(m.chat, { caption: 'OMG🥵', image: { url: waifpoudd.data.url } }, { quoted: m });
     break;
     
-        case 'blowjob':
+        case 'boobs':
  if (!m.isGroup) return reply(mess.group);
    if (!isNsfw) return reply(mess.nsfw);
 var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/blowjob.json'))
