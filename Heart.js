@@ -2402,12 +2402,16 @@ https://chat.whatsapp.com/${response}
 *Teamleitung* :
 
 -👀 *⸸ℑꈤᥴꪊ𝕭ꪊᦓ⸸* (Leitung)
--👀 *(Name)* (Stv.Leitung)
+-👀 *GoldtraderJD* (Stv.Leitung)
+
+*Community-Manager* : 
+
+-🤵 *(Name)*
 
 *Tech-Team* :
 
--💎 *Collin* (Leitung)
--🕹️ *Alex* 
+-💎 *Alex* (Leitung)
+-🕹️ *(Name)* 
 -🕹️ *(Name)*
 
 *Mod-Team* :
@@ -2417,14 +2421,22 @@ https://chat.whatsapp.com/${response}
 -👮🏻‍♂️ *Ian.H* (Mod)
 
 
-*Support Team* :
+*Support-Team* :
 
--💎 *GoldtraderJD* (Leitung)
+-💎 *(Name)* (Leitung)
 -👷🏻‍♂️ *(Name)* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
 -👷🏻‍♂️ *(Name)* (Supporter)
 
-\n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Um eine Supportanfrage zu stellen,benutzt bitte *${prefix}support* gefolgt von eurem Anliegen.\n\n*✨️Danke für eure Unterstützung, euer Bot-Team.* `)
+*Hoster-Team*:
+
+-💎 *Ɛ×ͥΐզͣօͫή* (Leitung)
+-💻 *(Name)* (Hoster)
+-💻 *(Name)* (Hoster)
+-💻 *(Name)* (Hoster)
+-💻 *(Name)* (Hoster)
+
+\n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Um eine Supportanfrage zu stellen,benutzt bitte *${prefix}support* gefolgt von eurem Anliegen.\n\n*✨️Danke für eure Unterstützung, euer Lion-Bot Team.* `)
         break   
     case 'addmod':
       case 'addowner':
