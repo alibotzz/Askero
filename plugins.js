@@ -139,8 +139,8 @@ Maria.ev.on("connection.update",async  (s) => {
         const { connection, lastDisconnect } = s
         if (connection == "open") {
 console.log(chalk.green('🟨Welcome to Lion-Bot'));
-console.log(chalk.gray('\n\n🚀Initializing...'));
-console.log(chalk.cyan('\n\n🦁Connected'));
+console.log(chalk.gray('\n\n🚀Initialisiere...'));
+console.log(chalk.cyan('\n\n🦁Verbunden'));
 
 
 const rainbowColors = ['red', 'yellow', 'green', 'blue', 'purple'];
