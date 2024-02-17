@@ -1771,7 +1771,6 @@ ${readmore}
 ┌──⊰ _*⚙️Allgemein⚙️*_
 │⊳ ⚙️ ${prefix}team
 │⊳ ⚙️ ${prefix}info
-│⊳ ⚙️ ${prefix}support
 │⊳ ⚙️ ${prefix}rules
 │⊳ ⚙️ ${prefix}help
 │⊳ ⚙️ ${prefix}runtime
@@ -1937,7 +1936,6 @@ case 'public': {
         if (!m.isGroup) return reply(mess.group);
         
         const nsfwmenu=`┌──⊰ _*🔞NSFW 🔞*_
-┌──⊰ 🔞NSFW 🔞
 │⊳ 💦  /boobs
 │⊳ 💦  /cum
 │⊳ 💦  /pussy
@@ -2385,7 +2383,7 @@ https://chat.whatsapp.com/${response}
         case 'test': case 'p': case 'ping': 
         let timestampe = speed()
         let latensie = speed() - timestampe
-         reply(`🧧Test erfolgreich, Bot ist aktiv\n\n📍*ping* ${latensie.toFixed(4)} milisekunden\n\n Tippe ${prefix}menu um meine Befehle zu sehen`)
+         reply(`🧧Test erfolgreich, Bot ist aktiv\n\n📍 *ping* ${latensie.toFixed(4)} milisekunden\n\n Tippe ${prefix}menu um meine Befehle zu sehen`)
         break   
     
         
@@ -2410,7 +2408,7 @@ https://chat.whatsapp.com/${response}
 
 *Tech-Team* :
 
--💎 *Alex* (Leitung)
+-💎 *(Name)* (Leitung)
 -🕹️ *(Name)* 
 -🕹️ *(Name)*
 
@@ -2418,7 +2416,7 @@ https://chat.whatsapp.com/${response}
 
 -💎 *Cthulhu* (Leitung)
 -👮🏻‍♂️ *Toruto* (Mod)
--👮🏻‍♂️ *Ian.H* (Mod)
+-👮🏻‍♂️ *Ian.H*  (Mod)
 
 
 *Support-Team* :
@@ -2431,12 +2429,12 @@ https://chat.whatsapp.com/${response}
 *Hoster-Team*:
 
 -💎 *Ɛ×ͥΐզͣօͫή* (Leitung)
--💻 *(Name)* (Hoster)
--💻 *(Name)* (Hoster)
--💻 *(Name)* (Hoster)
+-💻 *Cthulhu* (Hoster)
+-💻 *⸸ℑꈤᥴꪊ𝕭ꪊᦓ⸸* (Hoster)
+-💻 *GoldtraderJD* (Hoster)
 -💻 *(Name)* (Hoster)
 
-\n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Um eine Supportanfrage zu stellen,benutzt bitte *${prefix}support* gefolgt von eurem Anliegen.\n\n*✨️Danke für eure Unterstützung, euer Lion-Bot Team.* `)
+\n📛 *Wir bemühen uns, euch zeitnah zu antworten, und bitten höflich darum, kein Spam zu versenden.* \n\n Um eine Supportanfrage zu stellen,benutzt bitte *${prefix}support* gefolgt von eurem Anliegen.\n\n*✨️Danke für eure Unterstützung, \n euer Lion-Bot Team.* `)
         break   
     case 'addmod':
       case 'addowner':
