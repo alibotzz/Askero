@@ -27,7 +27,7 @@ const _ = require('lodash')
 const PORT = process.env.PORT || 3000
 const { LowSync, JSONFileSync } = require('./lib/lowdb')
 const FileSync = require('./lib/lowdb/adapters/JSONFileSync')
-global.modnumbers = ['49491741711168', '491773379918', '436504919106000']; 
+global.modnumbers = ['49491741711168', '+18324158335', '436504919106000']; 
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
 const isnsfw = JSON.parse(fs.readFileSync('./Gallery/database/nsfw.json'));
@@ -781,7 +781,7 @@ break
             case 'leave':
                 if (!isCreator) return reply(mess.owner)
                 if (!m.isGroup) return reply(mess.group)
-                reply('🟨Aufwiedersehen Freunde 🥺')
+                reply('🟨size iyi günler Leute')
                 await Maria.groupLeave(m.chat)
                 break
             case 'bcgc':
@@ -1769,7 +1769,7 @@ case 'truth':
 Verfügbare Befehle.🔖
 ${readmore}
 ┌──⊰ _*⚙️Allgemein⚙️*_
-│⊳ ⚙️ ${prefix}team
+│⊳ ⚙️ 
 │⊳ ⚙️ ${prefix}info
 │⊳ ⚙️ ${prefix}rules
 │⊳ ⚙️ ${prefix}help
@@ -1819,8 +1819,8 @@ ${readmore}
 │⊳ 📥 ${prefix}igvideo
 └──────────⊰
 ┌──⊰ _*🔖support🔖*_
-│⊳ 📥 ${prefix}tagteam
-│⊳ 📥 ${prefix}support
+│⊳ 📥 '4915902605449'
+│⊳ 📥 'https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO'
 └──────────⊰
 ┌──⊰ _*🎐SnapBlend🎐*_
 │⊳🎀 ${prefix}shadow
