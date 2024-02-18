@@ -1031,7 +1031,7 @@ case 'tag': case 'tagall': case 'all':{
           let response = await Maria.groupInviteCode(m.chat);
           Maria.sendText(
             m.sender,
-            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- ღĹíőͥńͣ BͫØ₸ღ\n\n🔖Gruppen 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺ruppen 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
+            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- wanda\n\n🔖Gruppen 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺ruppenlink:https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO${response}`,
             m,
             { detectLink: true }
           );
@@ -1057,7 +1057,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
         let repo = repoInfo.data;
         console.log(repo);
 
-   const scritxt = `*🚀ღĹíőͥńͣ BͫØ₸ღ🚀*\n
+   const scritxt = `*🚀Wanda🚀*\n
   *🌟Creator:* Ɛ×ͥΐզͣօͫή\n
   *🌟 Repo:* ${repo.html_url}\n
   *🌟 Total Forks:* ${repo.forks_count}\n
