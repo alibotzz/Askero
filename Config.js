@@ -2,25 +2,25 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //contact details
-global.Owner = ['49491741711168', '491773379918', '436504919106000'];
+global.Owner = ['49491741711168', '18324158335', '436504919106000'];
 global.ownernumber = ['49491741711168', '491773379918', '436504919106000'];
-global.ownername = "ღƐ×ͥΐզͣօͫήღ"//owner name
+global.ownername = "Askero"//owner name
 global.ytname = "YT: Soon"
 global.socialm = "GitHub: ExiqonBot"
 global.location = "Germany"
 
-global.botname = 'ღĹíőͥńͣ BͫØ₸ღ' //name of the bot
+global.botname = 'Wanda' //name of the bot
 
 //sticker details
-global.stickername = 'ღĹíőͥńͣ BͫØ₸ღ'
+global.stickername = 'askero'
 global.packname = 'Sticker By'
-global.author = 'ღĹíőͥńͣ BͫØ₸ღ'
+global.author = 'askero'
 //console view/theme
 global.themeemoji = '👑'
 global.wm = "ღĹíͥőͣńͫღ botz inc."
 
 //theme link
-global.link = 'https://chat.whatsapp.com/EGqCW9HeVoq3W2KmgX3Ri0'
+global.link = 'https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO'
 
 //custom prefix
 global.prefa = ['/']
@@ -39,7 +39,7 @@ global.multiplier = 100
 
 //reply messages
 global.mess = {
-    done: '*Tadaaa✨!* \n\n*ღĹíőͥńͣ BͫØ₸ღ*\n\n*🧩 Bot link:* \nhttps://telegra.ph/file/9fb77b8a49fdfd5d55661.jpg\n',
+    done: '*Tadaaa✨!* \n\n*wanda*\n\n*🧩 Bot link:* \nhttps://telegra.ph/file/9fb77b8a49fdfd5d55661.jpg\n',
     prem: '*Dieser Befehl kann nur von Premium-Nutzern verwendet werden.*',
     admin: '*Dieser Befehl kann nur von einem Admin verwendet werden.*',
     botAdmin: '*Dieser Befehl kann nur verwendet werden wenn der Bot Gruppenadmin ist.* ',
