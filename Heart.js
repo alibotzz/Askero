@@ -27,7 +27,7 @@ const _ = require('lodash')
 const PORT = process.env.PORT || 3000
 const { LowSync, JSONFileSync } = require('./lib/lowdb')
 const FileSync = require('./lib/lowdb/adapters/JSONFileSync')
-global.modnumbers = ['49491741711168', '+18324158335', '436504919106000']; 
+global.modnumbers = ['49491741711168', '18324158335', '436504919106000']; 
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
 const isnsfw = JSON.parse(fs.readFileSync('./Gallery/database/nsfw.json'));
@@ -1031,7 +1031,7 @@ case 'tag': case 'tagall': case 'all':{
           let response = await Maria.groupInviteCode(m.chat);
           Maria.sendText(
             m.sender,
-            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- wanda\n\n🔖Gruppen 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺ruppenlink:https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO${response}`,
+            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- Wanda\n\n🔖Gruppen 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺ruppenlink:https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO${response}`,
             m,
             { detectLink: true }
           );
@@ -1446,7 +1446,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 //////////////////////////////
             case "rules":
       
-        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze /support,um Probleme dem Support-Team zu melden.\n\n*--->* Um ღĹíőͥńͣ BͫØ₸ღ zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: */owner./mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der */menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ ღĹíͥőͣńͫღ Botz inc* `
+        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze /support,um Probleme dem Support-Team zu melden.\n\n*--->* Um Wanda zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: */owner./mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der */menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ Wanda Botz inc* `
 
         Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
@@ -1454,7 +1454,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
       case 'bot': case 'hilfe': case 'funk nicht':
        
         
-        let txxt = `👋🏻 Hey *${pushname}*, Ich bin *ღĹíőͥńͣ BͫØ₸ღ*📍\nEin Whatsapp Bot erstellt von: ღƐ×ͥΐզͣօͫήღ \n\n Nutze den Befehl *${prefix}support* für Hilfe`
+        let txxt = `👋🏻 Hey *${pushname}*, Ich bin *Wanda*📍\nEin Whatsapp Bot erstellt von: Askero \n\n Falls du Hilfe benötigst schreibe gerne meinen Besitzer unter:+4915902605449`
 
         Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch1.jpg" }, caption: txxt, gifPlayback: true }, { quoted: m });
         break
@@ -1471,13 +1471,13 @@ https://chat.whatsapp.com/KSM8yCpBHGUGkb2f3zfGz7`
 
       case "info":
             Maria.sendMessage(from, { react: { text: "ℹ️", key: m.key }}) 
-        let ifx = `🌟『ღĹíőͥńͣ BͫØ₸ღ』🌟
+        let ifx = `🌟『Wanda』🌟
 *🌟Beschreibung:* Ein WhatsApp-Bot mit einer umfangreichen Auswahl an Funktionen und cleveren Extras.
 *👤Creator:*  ${prefix}team
 *🕸Version:* 1.1.0
-*🎀supportgc:* https://chat.whatsapp.com/KSM8yCpBHGUGkb2f3zfGz7
+*🎀support:* +4915902605449
 *🚦Laufzeit:* ${runtime(process.uptime())}\n
-*Powered by ღĹíͥőͣńͫღ Botz Inc.*`
+*Powered by Askero Botz Inc.*`
 Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
         break
 
@@ -1761,7 +1761,7 @@ case 'truth':
   case 'menu': case 'help': case 'befehle': 
   const txt = `╭─「 *Konichiwa* 」
 │⋊ 𝕌𝕤𝕖𝕣: *${pushname}* 
-│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: *ღĹíőͥńͣ BͫØ₸ღ*
+│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: *Wanda*
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  [ *${prefix}* ]
 │⋊ 𝕆𝕨𝕟𝕖𝕣: ${prefix}owner
 │⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕙𝕒𝕥 𝔾𝕣𝕠𝕦𝕡: https://chat.whatsapp.com/C3i7IjruiUHEY2FOBd0xfb
@@ -1769,7 +1769,6 @@ case 'truth':
 Verfügbare Befehle.🔖
 ${readmore}
 ┌──⊰ _*⚙️Allgemein⚙️*_
-│⊳ ⚙️ 
 │⊳ ⚙️ ${prefix}info
 │⊳ ⚙️ ${prefix}rules
 │⊳ ⚙️ ${prefix}help
@@ -1819,7 +1818,7 @@ ${readmore}
 │⊳ 📥 ${prefix}igvideo
 └──────────⊰
 ┌──⊰ _*🔖support🔖*_
-│⊳ 📥 '4915902605449'
+│⊳ 📥 +4915902605449
 │⊳ 📥 'https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO'
 └──────────⊰
 ┌──⊰ _*🎐SnapBlend🎐*_
@@ -1856,6 +1855,7 @@ ${readmore}
 │⊳ 🏮 ${prefix}emojimix
 │⊳ 🏮 ${prefix}circlevideo
 │⊳ 🏮 ${prefix}google
+│⊳ 🏮 ${prefix}gpt
 └──────────⊰
 🍂 To enable NSFW (Admin only!), enter  *${prefix}nsfw* 
 
