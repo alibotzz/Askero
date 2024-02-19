@@ -138,9 +138,9 @@ const {  state,saveCreds } =await useMultiFileAuthState(`./session`)
 Maria.ev.on("connection.update",async  (s) => {
         const { connection, lastDisconnect } = s
         if (connection == "open") {
-console.log(chalk.green('🟨Welcome to Askero-Bot'));
+console.log(chalk.green('🟨Welcome to Wanda-Bot'));
 console.log(chalk.gray('\n\n🚀Initialisiere...'));
-console.log(chalk.cyan('\n\n🦁Verbunden'));
+console.log(chalk.cyan('\n\nVerbunden'));
 
 
 const rainbowColors = ['red', 'yellow', 'green', 'blue', 'purple'];
