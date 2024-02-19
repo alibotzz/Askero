@@ -1,8 +1,8 @@
 <a href=""><img src="" alt="Lion-Bot" border="0"></a>
-<h1 align="center">🦁ღĹíőͥńͣ BͫØ₸ღ🦁<br></h1>
+<h1 align="center">Wanda-Bot<br></h1>
 
 <p align="center"> 
-  Konochiwa Senpai, I am "Lion-Bot " a WhatsApp bot made by ღƐ×ͥΐզͣօͫήღ to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+  Konochiwa Senpai, I am "Lion-Bot " a WhatsApp bot made by Askero to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 </p>
 </br>
 
@@ -125,9 +125,9 @@ pkg install yarn
 
 pkg install imagemagick -y
 
-git clone https://github.com/ExiqonBot/Lion-Bot
+git clone https://github.com/alibotzz/Askero.git
 
-cd Lion-Bot
+cd Askero
 
 rm -rf session
 
@@ -149,6 +149,6 @@ npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 <h1 align="center">  🔮 Thanks To 🔮
 </h1>
 
-* [`🧧Cthulhu`](https://telegra.ph/file/a5b56b967fb935cf1a28c.jpg)
+* [`🧧`](https://telegra.ph/file/a5b56b967fb935cf1a28c.jpg)
 
-* [`🧧𝕯𝖆𝖗𝖙𝖍 𝕾𝖎𝖉𝖎𝖔𝖚𝖘`](https://telegra.ph/file/40194d06a2e041835136c.jpg)
+* [`🧧`](https://telegra.ph/file/40194d06a2e041835136c.jpg)
