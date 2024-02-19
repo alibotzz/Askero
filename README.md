@@ -2,7 +2,7 @@
 <h1 align="center">Wanda-Bot<br></h1>
 
 <p align="center"> 
-  Konochiwa Senpai, I am "Lion-Bot " a WhatsApp bot made by Askero to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+  Konochiwa Senpai, I am "Wanda-Bot " a WhatsApp bot made by Askero to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 </p>
 </br>
 
