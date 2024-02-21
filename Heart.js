@@ -1446,7 +1446,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 //////////////////////////////
             case "rules":
       
-        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze /support,um Probleme dem Support-Team zu melden.\n\n*--->* Um Wanda zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: */owner./mods* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der */menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ Wanda Botz inc* `
+        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze die support nummer aus dem menu,um Probleme Askero zu melden.\n\n*--->* Um Wanda zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: *ebenfalls Askero* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der */menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ Wanda Botz inc* `
 
         Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
@@ -1763,18 +1763,17 @@ case 'truth':
 │⋊ 𝕌𝕤𝕖𝕣: *${pushname}* 
 │⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: *Wanda*
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  [ *${prefix}* ]
-│⋊ 𝕆𝕨𝕟𝕖𝕣: ${prefix}owner
-│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕙𝕒𝕥 𝔾𝕣𝕠𝕦𝕡: https://chat.whatsapp.com/C3i7IjruiUHEY2FOBd0xfb
+│⋊ 𝕆𝕨𝕟𝕖𝕣: *Askero*
+│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕙𝕒𝕥 𝔾𝕣𝕠𝕦𝕡:
+https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO
 ╰────────────┈平和
 Verfügbare Befehle.🔖
 ${readmore}
 ┌──⊰ _*⚙️Allgemein⚙️*_
 │⊳ ⚙️ ${prefix}info
 │⊳ ⚙️ ${prefix}rules
-│⊳ ⚙️ ${prefix}help
 │⊳ ⚙️ ${prefix}runtime
 │⊳ ⚙️ ${prefix}ping
-│⊳ ⚙️ ${prefix}owner
 └──────────⊰
 
 ┌──⊰ _*🌐Gruppen🌐*_
@@ -1797,7 +1796,6 @@ ${readmore}
 └──────────⊰
 
 ┌──⊰ _*🎉FUN🎉*_
-│⊳🎟️ ${prefix}xp
 │⊳🎟️ ${prefix}truth
 │⊳🎟️ ${prefix}dare
 │⊳🎟️ ${prefix}couple 
@@ -1819,7 +1817,7 @@ ${readmore}
 └──────────⊰
 ┌──⊰ _*🔖support🔖*_
 │⊳ 📥 +4915902605449
-│⊳ 📥 'https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO'
+│⊳ 📥 https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO
 └──────────⊰
 ┌──⊰ _*🎐SnapBlend🎐*_
 │⊳🎀 ${prefix}shadow
