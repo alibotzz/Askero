@@ -1446,7 +1446,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 //////////////////////////////
             case "rules":
       
-        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze die support nummer aus dem menu,um Probleme Askero zu melden.\n\n*--->* Um Wanda zu deiner Gruppe hinzuzufügen Kontaktiere bitte einen der Besitzer mit: *ebenfalls Askero* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der */menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ Wanda Botz inc* `
+        const helptxt = `_*📍[Regeln des Bots]📍*_\n\n\n*>>>* Benutze die support nummer aus dem menu,um Probleme Askero zu melden.\n\n*--->* Um Wanda zu deiner Gruppe hinzuzufügen Kontaktiere bitte *ebenfalls Askero* \n\n*--->* Verwenden keine falschen  Befehle, sondern nur die Befehl aus der */menu* liste \n\n*Spamme den Bot nicht mit Befehlen zu, wenn der Bot nicht Reagiert/Antwortet. bedeutet es dass der Bot offline ist oder Verbindungsprobleme hat.* \n\n*Bei einem Regelverstoß wird man Permanent Blockiert!* 🚫 \n\n\n*©️ Wanda Botz inc* `
 
         Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
@@ -1473,7 +1473,7 @@ https://chat.whatsapp.com/KSM8yCpBHGUGkb2f3zfGz7`
             Maria.sendMessage(from, { react: { text: "ℹ️", key: m.key }}) 
         let ifx = `🌟『Wanda』🌟
 *🌟Beschreibung:* Ein WhatsApp-Bot mit einer umfangreichen Auswahl an Funktionen und cleveren Extras.
-*👤Creator:*  ${prefix}team
+*👤Creator:* Askero
 *🕸Version:* 1.1.0
 *🎀support:* +4915902605449
 *🚦Laufzeit:* ${runtime(process.uptime())}\n
