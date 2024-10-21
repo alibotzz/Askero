@@ -20,7 +20,7 @@ global.themeemoji = '👑'
 global.wm = "ღĹíͥőͣńͫღ botz inc."
 
 //theme link
-global.link = 'https://chat.whatsapp.com/KesJbjwnfYe0oBMkphuohO'
+global.link = ''
 
 //custom prefix
 global.prefa = ['/']
@@ -39,14 +39,14 @@ global.multiplier = 100
 
 //reply messages
 global.mess = {
-    done: '*Tadaaa✨!* \n\n*wanda*\n\n*🧩 Bot link:* \nhttps://telegra.ph/file/9fb77b8a49fdfd5d55661.jpg\n',
+    done: '*erstellt von Ali Asker✨!* \n\n*wanda*\n\n*🧩 Bot link:* \nhttps://telegra.ph/file/9fb77b8a49fdfd5d55661.jpg\n',
     prem: '*Dieser Befehl kann nur von Premium-Nutzern verwendet werden.*',
     admin: '*Dieser Befehl kann nur von einem Admin verwendet werden.*',
     botAdmin: '*Dieser Befehl kann nur verwendet werden wenn der Bot Gruppenadmin ist.* ',
-    owner: '*Dieser Befehl kann nur vom Besitzer des Bots verwendet werden.*',
+    owner: '*Dieser Befehl kann nur vom Ali Asker des Bots verwendet werden.*',
     group: '*Dieser Befehl ist nur für Gruppen verfügbar.*',
     private: '*Dieser Befehl ist nur für private Chats verfügbar.*',
-    wait: '*Un momento por favor ich arbeite daran...* ',    
+    wait: '*Bir dur mrk ich arbeite daran...* ',    
     error: '*Error!*',
 }
 
